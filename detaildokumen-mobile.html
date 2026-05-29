@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Detail Dokumen | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#00518c", "on-primary": "#ffffff",
+        "primary-container": "#2a6aa7", "primary-fixed": "#d2e4ff",
+        "secondary": "#7d5800", "secondary-container": "#ffbe3d",
+        "on-secondary-container": "#704e00",
+        "tertiary": "#295276", "tertiary-fixed": "#cfe5ff",
+        "surface": "#f8f9ff", "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3f9", "surface-container": "#ededf3",
+        "surface-container-high": "#e7e8ed", "surface-container-highest": "#e1e2e8",
+        "on-surface": "#191c20", "on-surface-variant": "#414750",
+        "outline": "#727781", "outline-variant": "#c1c7d1",
+        "background": "#f8f9ff", "error": "#ba1a1a", "error-container": "#ffdad6"
+      }
+    }
+  }
+}
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  body { min-height: max(844px, 100dvh); }
+</style>
+</head>
+<body class="bg-background text-on-surface font-inter pb-28">
+
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm" aria-label="Header aplikasi">
+  <div class="flex items-center justify-between px-4 h-14">
+    <div class="flex items-center gap-3">
+      <a href="brankasdokumen-mobile.html" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors" aria-label="Kembali ke Brankas Dokumen">
+        <span class="material-symbols-outlined text-primary">arrow_back</span>
+      </a>
+      <h1 class="text-sm font-black text-[#003466] font-manrope">Detail Dokumen</h1>
+    </div>
+    <button class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors" aria-label="Notifikasi">
+      <span class="material-symbols-outlined text-primary">notifications</span>
+      <span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+    </button>
+  </div>
+</header>
+
+<main class="pt-16 px-4 space-y-4" aria-label="Konten utama">
+  <!-- Breadcrumb -->
+  <nav class="flex items-center gap-1 text-xs text-on-surface-variant/70 mt-4" aria-label="Breadcrumb">
+    <a href="overview-mobile.html" class="hover:text-primary">Dashboard</a>
+    <span class="material-symbols-outlined text-xs">chevron_right</span>
+    <a href="brankasdokumen-mobile.html" class="hover:text-primary">Brankas</a>
+    <span class="material-symbols-outlined text-xs">chevron_right</span>
+    <span class="text-primary font-bold truncate">PT Teknologi Maju</span>
+  </nav>
+
+  <!-- Company Info Card -->
+  <section class="bg-gradient-to-br from-[#003466] to-primary rounded-xl p-5 text-white shadow-md" aria-label="Informasi perusahaan">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center border border-white/30">
+        <span class="material-symbols-outlined text-2xl text-white" style="font-variation-settings:'FILL' 1;">corporate_fare</span>
+      </div>
+      <div>
+        <h2 class="font-black text-base font-manrope leading-tight">PT Teknologi Maju Nusantara</h2>
+        <p class="text-white/70 text-xs">Perseroan Terbatas</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-3 bg-white/10 rounded-lg p-3">
+      <div>
+        <p class="text-[9px] uppercase font-bold text-white/50 mb-0.5">Nomor Akta</p>
+        <p class="text-xs font-bold">No. 12/2021/Notaris</p>
+      </div>
+      <div>
+        <p class="text-[9px] uppercase font-bold text-white/50 mb-0.5">Tanggal Pendirian</p>
+        <p class="text-xs font-bold">12 Jan 2021</p>
+      </div>
+      <div>
+        <p class="text-[9px] uppercase font-bold text-white/50 mb-0.5">Nomor NIB</p>
+        <p class="text-xs font-bold">1234567890123</p>
+      </div>
+      <div>
+        <p class="text-[9px] uppercase font-bold text-white/50 mb-0.5">Status</p>
+        <div class="flex items-center gap-1">
+          <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+          <p class="text-xs font-bold">SELESAI</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dokumen List (Cards) -->
+  <section aria-label="Daftar dokumen legal">
+    <h3 class="text-base font-bold text-on-surface font-manrope mb-3">Berkas Dokumen <span class="text-xs font-normal text-on-surface-variant">(4 dokumen)</span></h3>
+    <div class="space-y-3">
+      <!-- Akta Pendirian -->
+      <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 shadow-sm">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-primary">description</span>
+          </div>
+          <div class="flex-1">
+            <p class="font-bold text-sm text-on-surface">Akta Pendirian</p>
+            <p class="text-xs text-on-surface-variant">Legalitas • 12.2024.1234.AK</p>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-green-100 text-green-700 text-[10px] font-bold shrink-0">VALID</span>
+        </div>
+        <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20">
+          <span class="text-xs text-on-surface-variant">12 Jan 2024</span>
+          <button class="flex items-center gap-1.5 px-4 py-2 bg-[#003466] text-white text-xs font-bold rounded-lg hover:bg-primary transition-all min-h-[44px]" aria-label="Unduh Akta Pendirian">
+            <span class="material-symbols-outlined text-sm">download</span>
+            Unduh
+          </button>
+        </div>
+      </div>
+      <!-- SK Menteri -->
+      <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 shadow-sm">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-primary">verified_user</span>
+          </div>
+          <div class="flex-1">
+            <p class="font-bold text-sm text-on-surface">SK Menteri Kehakiman</p>
+            <p class="text-xs text-on-surface-variant">Legalitas • AHU-001234.AH.01.01</p>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-green-100 text-green-700 text-[10px] font-bold shrink-0">VALID</span>
+        </div>
+        <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20">
+          <span class="text-xs text-on-surface-variant">15 Feb 2024</span>
+          <button class="flex items-center gap-1.5 px-4 py-2 bg-[#003466] text-white text-xs font-bold rounded-lg hover:bg-primary transition-all min-h-[44px]" aria-label="Unduh SK Menteri">
+            <span class="material-symbols-outlined text-sm">download</span>
+            Unduh
+          </button>
+        </div>
+      </div>
+      <!-- NPWP -->
+      <div class="bg-error-container/20 border border-error/20 rounded-xl p-4 shadow-sm">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 bg-error-container rounded-lg flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-error">report</span>
+          </div>
+          <div class="flex-1">
+            <p class="font-bold text-sm text-on-surface">Sertifikat NPWP</p>
+            <p class="text-xs text-on-surface-variant">Perpajakan • 01.234.567.8.901.000</p>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-[10px] font-bold shrink-0">EXPIRED</span>
+        </div>
+        <div class="flex items-center justify-between pt-3 border-t border-error/10">
+          <span class="text-xs text-on-surface-variant">01 Mar 2024</span>
+          <button class="flex items-center gap-1.5 px-4 py-2 border border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary/5 transition-all min-h-[44px]" aria-label="Unduh NPWP">
+            <span class="material-symbols-outlined text-sm">download</span>
+            Unduh
+          </button>
+        </div>
+      </div>
+      <!-- NIB -->
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 shadow-sm">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-amber-600">badge</span>
+          </div>
+          <div class="flex-1">
+            <p class="font-bold text-sm text-on-surface">NIB (OSS RBA)</p>
+            <p class="text-xs text-on-surface-variant">Perizinan • 1234567890123</p>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 text-[10px] font-bold shrink-0">REVIEW</span>
+        </div>
+        <div class="flex items-center justify-between pt-3 border-t border-amber-200">
+          <span class="text-xs text-on-surface-variant">20 Mei 2026</span>
+          <button class="flex items-center gap-1.5 px-4 py-2 border border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary/5 transition-all min-h-[44px]" aria-label="Unduh NIB">
+            <span class="material-symbols-outlined text-sm">download</span>
+            Unduh
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Help -->
+  <div class="bg-[#003466] rounded-xl p-5 text-white shadow-sm">
+    <h3 class="font-bold font-manrope mb-1">Butuh Bantuan Hukum?</h3>
+    <p class="text-white/70 text-xs mb-3">Tim legal kami siap membantu Anda terkait dokumen ini.</p>
+    <a href="konsultasi-mobile.html" class="flex items-center justify-center gap-2 w-full py-2.5 bg-secondary-container text-on-secondary-container font-bold text-sm rounded-lg hover:bg-secondary-fixed transition-all min-h-[44px]">
+      <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">chat</span>
+      Chat dengan Tim
+    </a>
+  </div>
+</main>
+
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest border-t border-outline-variant/30 shadow-lg" aria-label="Navigasi bawah">
+  <div class="flex justify-around items-center h-16 px-2">
+    <a href="overview-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Beranda">
+      <span class="material-symbols-outlined text-xl">dashboard</span>
+      <span class="text-[10px] font-medium">Beranda</span>
+    </a>
+    <a href="permohonansaya-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Layanan">
+      <span class="material-symbols-outlined text-xl">gavel</span>
+      <span class="text-[10px] font-medium">Layanan</span>
+    </a>
+    <a href="brankasdokumen-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full min-w-[44px] min-h-[44px]" aria-current="page" aria-label="Dokumen">
+      <span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">folder_open</span>
+      <span class="text-[10px] font-bold">Dokumen</span>
+    </a>
+    <a href="#" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Profil">
+      <span class="material-symbols-outlined text-xl">person</span>
+      <span class="text-[10px] font-medium">Profil</span>
+    </a>
+  </div>
+</nav>
+
+</body>
+</html>

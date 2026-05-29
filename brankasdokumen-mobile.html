@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Brankas Dokumen | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#00518c", "on-primary": "#ffffff",
+        "primary-container": "#2a6aa7", "primary-fixed": "#d2e4ff",
+        "secondary": "#7d5800", "secondary-container": "#ffbe3d",
+        "on-secondary-container": "#704e00",
+        "tertiary": "#295276", "tertiary-fixed": "#cfe5ff",
+        "surface": "#f8f9ff", "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3f9", "surface-container": "#ededf3",
+        "surface-container-high": "#e7e8ed", "surface-container-highest": "#e1e2e8",
+        "on-surface": "#191c20", "on-surface-variant": "#414750",
+        "outline": "#727781", "outline-variant": "#c1c7d1",
+        "background": "#f8f9ff", "error": "#ba1a1a", "error-container": "#ffdad6"
+      }
+    }
+  }
+}
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  body { min-height: max(844px, 100dvh); }
+</style>
+</head>
+<body class="bg-background text-on-surface font-inter pb-28">
+
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm" aria-label="Header aplikasi">
+  <div class="flex items-center justify-between px-4 h-14">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center">
+        <span class="text-white font-bold text-xs">SA</span>
+      </div>
+      <h1 class="text-sm font-black text-[#003466] font-manrope">Akses Legal Indonesia</h1>
+    </div>
+    <button class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors" aria-label="Notifikasi">
+      <span class="material-symbols-outlined text-primary">notifications</span>
+      <span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+    </button>
+  </div>
+</header>
+
+<main class="pt-16 px-4 space-y-4" aria-label="Konten utama">
+  <section class="mt-4">
+    <nav class="flex items-center gap-1 text-xs text-on-surface-variant/70 mb-2" aria-label="Breadcrumb">
+      <a href="overview-mobile.html" class="hover:text-primary">Dashboard</a>
+      <span class="material-symbols-outlined text-xs">chevron_right</span>
+      <span class="text-primary font-bold">Brankas Dokumen</span>
+    </nav>
+    <h2 class="text-xl font-black text-[#003466] font-manrope">Brankas Dokumen</h2>
+    <p class="text-sm text-on-surface-variant mt-1">Kelola dokumen legalitas semua perusahaan Anda.</p>
+  </section>
+
+  <!-- Daftar Perusahaan (Cards) -->
+  <section class="space-y-3" aria-label="Daftar perusahaan">
+    <!-- Card 1 -->
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">
+          <span class="material-symbols-outlined">domain</span>
+        </div>
+        <div class="flex-1">
+          <p class="font-bold text-sm text-[#003466] font-manrope leading-tight">PT MITRA MADRASAH DIGITAL</p>
+          <p class="text-xs text-on-surface-variant italic">PT Perorangan</p>
+        </div>
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded-full shrink-0">
+          <span class="material-symbols-outlined text-xs" style="font-variation-settings:'FILL' 1;">check_circle</span>
+          Selesai
+        </span>
+      </div>
+      <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20">
+        <span class="text-xs text-on-surface-variant">20 Mei 2026</span>
+        <a href="detaildokumen-mobile.html" class="flex items-center gap-1.5 px-4 py-2 bg-[#003466] text-white text-xs font-bold rounded-lg hover:bg-primary transition-all min-h-[44px]">
+          <span class="material-symbols-outlined text-sm">visibility</span>
+          Lihat Detail
+        </a>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">
+          <span class="material-symbols-outlined">domain</span>
+        </div>
+        <div class="flex-1">
+          <p class="font-bold text-sm text-[#003466] font-manrope leading-tight">CV KOPI RAYA</p>
+          <p class="text-xs text-on-surface-variant italic">CV</p>
+        </div>
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded-full shrink-0">
+          <span class="material-symbols-outlined text-xs" style="font-variation-settings:'FILL' 1;">check_circle</span>
+          Selesai
+        </span>
+      </div>
+      <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20">
+        <span class="text-xs text-on-surface-variant">20 Mei 2026</span>
+        <a href="detaildokumen-mobile.html" class="flex items-center gap-1.5 px-4 py-2 bg-[#003466] text-white text-xs font-bold rounded-lg hover:bg-primary transition-all min-h-[44px]">
+          <span class="material-symbols-outlined text-sm">visibility</span>
+          Lihat Detail
+        </a>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">
+          <span class="material-symbols-outlined">domain</span>
+        </div>
+        <div class="flex-1">
+          <p class="font-bold text-sm text-[#003466] font-manrope leading-tight">CV PUTRA POSO</p>
+          <p class="text-xs text-on-surface-variant italic">CV</p>
+        </div>
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded-full shrink-0">
+          <span class="material-symbols-outlined text-xs" style="font-variation-settings:'FILL' 1;">check_circle</span>
+          Selesai
+        </span>
+      </div>
+      <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20">
+        <span class="text-xs text-on-surface-variant">20 Mei 2026</span>
+        <a href="detaildokumen-mobile.html" class="flex items-center gap-1.5 px-4 py-2 bg-[#003466] text-white text-xs font-bold rounded-lg hover:bg-primary transition-all min-h-[44px]">
+          <span class="material-symbols-outlined text-sm">visibility</span>
+          Lihat Detail
+        </a>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">
+          <span class="material-symbols-outlined">corporate_fare</span>
+        </div>
+        <div class="flex-1">
+          <p class="font-bold text-sm text-[#003466] font-manrope leading-tight">PERKUMPULAN KERUKUNAN KELUARGA BONTO JAI</p>
+          <p class="text-xs text-on-surface-variant italic">Perkumpulan</p>
+        </div>
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded-full shrink-0">
+          <span class="material-symbols-outlined text-xs" style="font-variation-settings:'FILL' 1;">check_circle</span>
+          Selesai
+        </span>
+      </div>
+      <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20">
+        <span class="text-xs text-on-surface-variant">19 Mei 2026</span>
+        <a href="detaildokumen-mobile.html" class="flex items-center gap-1.5 px-4 py-2 bg-[#003466] text-white text-xs font-bold rounded-lg hover:bg-primary transition-all min-h-[44px]">
+          <span class="material-symbols-outlined text-sm">visibility</span>
+          Lihat Detail
+        </a>
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">
+          <span class="material-symbols-outlined">foundation</span>
+        </div>
+        <div class="flex-1">
+          <p class="font-bold text-sm text-[#003466] font-manrope leading-tight">YAYASAN IMAM MALIK</p>
+          <p class="text-xs text-on-surface-variant italic">Yayasan</p>
+        </div>
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded-full shrink-0">
+          <span class="material-symbols-outlined text-xs" style="font-variation-settings:'FILL' 1;">check_circle</span>
+          Selesai
+        </span>
+      </div>
+      <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20">
+        <span class="text-xs text-on-surface-variant">19 Mei 2026</span>
+        <a href="detaildokumen-mobile.html" class="flex items-center gap-1.5 px-4 py-2 bg-[#003466] text-white text-xs font-bold rounded-lg hover:bg-primary transition-all min-h-[44px]">
+          <span class="material-symbols-outlined text-sm">visibility</span>
+          Lihat Detail
+        </a>
+      </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 shadow-sm">
+      <div class="flex items-start gap-3 mb-3">
+        <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0">
+          <span class="material-symbols-outlined">domain</span>
+        </div>
+        <div class="flex-1">
+          <p class="font-bold text-sm text-[#003466] font-manrope leading-tight">CV SUKSES ARTA NIAGA</p>
+          <p class="text-xs text-on-surface-variant italic">CV</p>
+        </div>
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded-full shrink-0">
+          <span class="material-symbols-outlined text-xs" style="font-variation-settings:'FILL' 1;">check_circle</span>
+          Selesai
+        </span>
+      </div>
+      <div class="flex items-center justify-between pt-3 border-t border-outline-variant/20">
+        <span class="text-xs text-on-surface-variant">19 Mei 2026</span>
+        <a href="detaildokumen-mobile.html" class="flex items-center gap-1.5 px-4 py-2 bg-[#003466] text-white text-xs font-bold rounded-lg hover:bg-primary transition-all min-h-[44px]">
+          <span class="material-symbols-outlined text-sm">visibility</span>
+          Lihat Detail
+        </a>
+      </div>
+    </div>
+
+    <!-- Pagination info -->
+    <p class="text-xs text-center text-on-surface-variant py-2">Menampilkan 6 dari 24 entitas</p>
+    <button class="w-full py-3 text-primary font-bold text-sm flex items-center justify-center gap-2 hover:bg-surface-container rounded-xl transition-colors min-h-[44px]">
+      Muat Lebih Banyak
+      <span class="material-symbols-outlined text-sm">expand_more</span>
+    </button>
+  </section>
+</main>
+
+<!-- FAB -->
+<a href="konsultasi-mobile.html" class="fixed bottom-20 right-4 w-14 h-14 bg-secondary-container text-on-secondary-container rounded-2xl shadow-xl flex items-center justify-center z-40 border-2 border-white active:scale-90 transition-transform" aria-label="Konsultasi ahli">
+  <span class="material-symbols-outlined text-2xl" style="font-variation-settings:'FILL' 1;">support_agent</span>
+</a>
+
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest border-t border-outline-variant/30 shadow-lg" aria-label="Navigasi bawah">
+  <div class="flex justify-around items-center h-16 px-2">
+    <a href="overview-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Beranda">
+      <span class="material-symbols-outlined text-xl">dashboard</span>
+      <span class="text-[10px] font-medium">Beranda</span>
+    </a>
+    <a href="permohonansaya-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Layanan">
+      <span class="material-symbols-outlined text-xl">gavel</span>
+      <span class="text-[10px] font-medium">Layanan</span>
+    </a>
+    <a href="brankasdokumen-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full min-w-[44px] min-h-[44px]" aria-current="page" aria-label="Dokumen">
+      <span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">folder_open</span>
+      <span class="text-[10px] font-bold">Dokumen</span>
+    </a>
+    <a href="#" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Profil">
+      <span class="material-symbols-outlined text-xl">person</span>
+      <span class="text-[10px] font-medium">Profil</span>
+    </a>
+  </div>
+</nav>
+
+</body>
+</html>

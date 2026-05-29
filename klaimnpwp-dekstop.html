@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Klaim NPWP | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#00518c", "on-primary": "#ffffff",
+        "primary-container": "#2a6aa7", "primary-fixed": "#d2e4ff",
+        "secondary": "#7d5800", "secondary-container": "#ffbe3d",
+        "on-secondary-container": "#704e00",
+        "tertiary": "#295276", "tertiary-fixed": "#cfe5ff",
+        "surface": "#f8f9ff", "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3f9", "surface-container": "#ededf3",
+        "surface-container-high": "#e7e8ed", "surface-container-highest": "#e1e2e8",
+        "on-surface": "#191c20", "on-surface-variant": "#414750",
+        "outline": "#727781", "outline-variant": "#c1c7d1",
+        "background": "#f8f9ff", "error": "#ba1a1a", "error-container": "#ffdad6"
+      },
+      fontFamily: { "manrope": ["Manrope"], "inter": ["Inter"] }
+    }
+  }
+}
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+  .nav-active { border-right: 3px solid #003466; background-color: #ededf3; }
+  .field-error { border-color: #ba1a1a !important; }
+  .error-msg { color: #ba1a1a; font-size: 11px; margin-top: 4px; display: none; }
+  .error-msg.show { display: block; }
+</style>
+</head>
+<body class="bg-background font-inter text-on-surface">
+
+<!-- Sidebar -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest shadow-[2px_0_16px_rgba(0,0,0,0.06)] flex flex-col z-40" aria-label="Navigasi utama">
+  <div class="px-6 py-6 border-b border-outline-variant/30">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-[#003466] rounded-lg flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-lg" style="font-variation-settings:'FILL' 1;">balance</span>
+      </div>
+      <div>
+        <h1 class="text-base font-black text-[#003466] leading-tight font-manrope">Digital Jurist</h1>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-secondary">Akses Legal</p>
+      </div>
+    </div>
+  </div>
+  <nav class="flex-1 px-3 py-4 space-y-1" aria-label="Menu navigasi">
+    <a href="overview-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">dashboard</span>
+      <span class="text-sm font-manrope">Overview</span>
+    </a>
+    <a href="konsultasi-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">support_agent</span>
+      <span class="text-sm font-manrope">Konsultasi</span>
+    </a>
+    <a href="permohonansaya-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-[#003466] font-bold rounded-xl nav-active transition-all" aria-current="page">
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">assignment</span>
+      <span class="text-sm font-manrope">Permohonan Saya</span>
+    </a>
+    <a href="brankasdokumen-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">folder_open</span>
+      <span class="text-sm font-manrope">Dokumen Legal</span>
+    </a>
+    <a href="billing&harga-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">payments</span>
+      <span class="text-sm font-manrope">Billing &amp; Harga</span>
+    </a>
+    <a href="klaimpelaporanspt-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">receipt_long</span>
+      <span class="text-sm font-manrope">Pelaporan Pajak</span>
+    </a>
+  </nav>
+  <div class="px-3 pb-4 space-y-2">
+    <div class="px-3 py-3 bg-primary/5 rounded-xl border border-primary/10">
+      <p class="text-[10px] font-bold text-primary uppercase tracking-wider mb-2">Layanan Baru</p>
+      <a href="konsultasi-dekstop.html" class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#003466] text-white text-sm font-bold rounded-lg hover:bg-primary transition-all active:scale-95">
+        <span class="material-symbols-outlined text-sm">add</span>
+        Mulai Konsultasi
+      </a>
+    </div>
+    <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">help_outline</span>
+      <span class="font-manrope">Bantuan</span>
+    </a>
+    <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-error hover:bg-error-container/20 rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">logout</span>
+      <span class="font-manrope">Keluar</span>
+    </a>
+  </div>
+</aside>
+
+<!-- Main -->
+<div class="ml-64 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-30 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm" aria-label="Header aplikasi">
+    <div class="flex items-center justify-between px-8 h-16">
+      <div class="flex-1 max-w-md">
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+          <input type="text" placeholder="Cari layanan..." aria-label="Cari layanan"
+            class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-full text-sm border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+        </div>
+      </div>
+      <div class="flex items-center gap-4 pl-6">
+        <button class="relative p-2 rounded-full hover:bg-surface-container transition-colors" aria-label="Notifikasi">
+          <span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+        </button>
+        <div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-sm">BD</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 p-8 max-w-[900px] mx-auto w-full" aria-label="Formulir Klaim NPWP">
+    <nav class="flex items-center gap-2 text-xs font-medium text-on-surface-variant/70 mb-6" aria-label="Breadcrumb">
+      <a href="overview-dekstop.html" class="hover:text-primary">Dashboard</a>
+      <span class="material-symbols-outlined text-sm">chevron_right</span>
+      <a href="permohonansaya-dekstop.html" class="hover:text-primary">Permohonan</a>
+      <span class="material-symbols-outlined text-sm">chevron_right</span>
+      <span class="text-primary font-bold">Klaim NPWP</span>
+    </nav>
+
+    <section class="mb-8">
+      <h2 class="text-3xl font-black text-[#003466] font-manrope mb-2">Klaim NPWP Badan</h2>
+      <p class="text-on-surface-variant text-sm leading-relaxed">Lengkapi data di bawah ini untuk memproses Nomor Pokok Wajib Pajak badan usaha Anda secara digital.</p>
+    </section>
+
+    <!-- Stepper -->
+    <div class="flex items-center gap-2 mb-8" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" aria-label="Langkah 1 dari 3">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-full bg-[#003466] text-white flex items-center justify-center text-sm font-bold">1</div>
+        <span class="text-sm font-bold text-[#003466]">Identitas Badan</span>
+      </div>
+      <div class="flex-1 h-0.5 bg-outline-variant/40"></div>
+      <div class="flex items-center gap-2 opacity-40">
+        <div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-sm font-bold">2</div>
+        <span class="text-sm font-medium text-on-surface-variant">Data Pengurus</span>
+      </div>
+      <div class="flex-1 h-0.5 bg-outline-variant/40"></div>
+      <div class="flex items-center gap-2 opacity-40">
+        <div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-sm font-bold">3</div>
+        <span class="text-sm font-medium text-on-surface-variant">Konfirmasi</span>
+      </div>
+    </div>
+
+    <form id="npwp-form" novalidate class="space-y-6">
+      <!-- Section 1: Identitas Badan Usaha -->
+      <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 shadow-sm" aria-label="Identitas Badan Usaha">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#003466]">corporate_fare</span>
+          </div>
+          <h3 class="text-base font-bold text-[#003466] font-manrope">Identitas Badan Usaha</h3>
+        </div>
+        <div class="grid grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="nama-perusahaan">Nama Perusahaan <span class="text-error">*</span></label>
+            <input type="text" id="nama-perusahaan" placeholder="PT. Nama Perusahaan"
+              class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+              aria-required="true" aria-describedby="nama-perusahaan-error">
+            <p class="error-msg" id="nama-perusahaan-error" role="alert">Nama perusahaan wajib diisi</p>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="jenis-badan">Jenis Badan Usaha <span class="text-error">*</span></label>
+            <select id="jenis-badan"
+              class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+              aria-required="true" aria-describedby="jenis-badan-error">
+              <option value="">Pilih jenis badan usaha</option>
+              <option>PT (Perseroan Terbatas)</option>
+              <option>CV (Commanditaire Vennootschap)</option>
+              <option>Firma</option>
+              <option>Yayasan</option>
+              <option>Perkumpulan</option>
+              <option>Koperasi</option>
+            </select>
+            <p class="error-msg" id="jenis-badan-error" role="alert">Jenis badan usaha wajib dipilih</p>
+          </div>
+          <div class="col-span-2">
+            <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="nomor-akta">Nomor Akta Pendirian <span class="text-error">*</span></label>
+            <input type="text" id="nomor-akta" placeholder="No. 12/2021/Notaris"
+              class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+              aria-required="true" aria-describedby="nomor-akta-error">
+            <p class="error-msg" id="nomor-akta-error" role="alert">Nomor akta wajib diisi</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Data Pengurus -->
+      <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 shadow-sm" aria-label="Data Pengurus">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#003466]">person</span>
+          </div>
+          <h3 class="text-base font-bold text-[#003466] font-manrope">Data Pengurus</h3>
+        </div>
+        <div class="grid grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="nama-direktur">Nama Direktur Utama <span class="text-error">*</span></label>
+            <input type="text" id="nama-direktur" placeholder="Nama lengkap direktur"
+              class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+              aria-required="true" aria-describedby="nama-direktur-error">
+            <p class="error-msg" id="nama-direktur-error" role="alert">Nama direktur wajib diisi</p>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="nik-direktur">NIK Direktur <span class="text-error">*</span></label>
+            <input type="text" id="nik-direktur" maxlength="16" placeholder="16 digit NIK direktur"
+              class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+              aria-required="true" aria-describedby="nik-direktur-error">
+            <p class="error-msg" id="nik-direktur-error" role="alert">NIK direktur wajib diisi</p>
+          </div>
+          <div class="col-span-2">
+            <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="alamat-domisili">Alamat Domisili <span class="text-error">*</span></label>
+            <textarea id="alamat-domisili" rows="3" placeholder="Alamat domisili direktur sesuai KTP..."
+              class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none"
+              aria-required="true" aria-describedby="alamat-domisili-error"></textarea>
+            <p class="error-msg" id="alamat-domisili-error" role="alert">Alamat domisili wajib diisi</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Security Note -->
+      <div class="flex items-start gap-3 p-4 bg-primary-fixed/50 rounded-xl border border-primary/10">
+        <span class="material-symbols-outlined text-primary mt-0.5" style="font-variation-settings:'FILL' 1;">verified_user</span>
+        <div>
+          <h4 class="font-bold text-sm text-on-surface">Keamanan Data Terjamin</h4>
+          <p class="text-xs text-on-surface-variant leading-relaxed mt-0.5">Data yang Anda masukkan dilindungi dengan enkripsi tingkat tinggi dan hanya digunakan untuk keperluan verifikasi pajak resmi oleh Direktorat Jenderal Pajak.</p>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="flex justify-end pt-2">
+        <button type="submit" class="flex items-center gap-3 px-8 py-4 bg-[#003466] text-white font-black rounded-xl shadow-lg hover:bg-primary transition-all active:scale-95 font-manrope">
+          <span>Kirim Klaim Sekarang</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">send</span>
+        </button>
+      </div>
+    </form>
+  </main>
+</div>
+
+<script>
+document.getElementById('npwp-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let valid = true;
+  ['nama-perusahaan', 'jenis-badan', 'nomor-akta', 'nama-direktur', 'nik-direktur', 'alamat-domisili'].forEach(id => {
+    const el = document.getElementById(id);
+    const err = document.getElementById(id + '-error');
+    if (!el.value.trim()) {
+      el.classList.add('field-error'); if(err) err.classList.add('show'); valid = false;
+    } else { el.classList.remove('field-error'); if(err) err.classList.remove('show'); }
+  });
+  if (valid) window.location.href = 'klaimberhasil-dekstop.html';
+});
+document.getElementById('nik-direktur').addEventListener('input', function() { this.value = this.value.replace(/\D/g,''); });
+</script>
+</body>
+</html>

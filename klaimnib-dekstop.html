@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Formulir Klaim NIB | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#00518c", "on-primary": "#ffffff",
+        "primary-container": "#2a6aa7", "on-primary-container": "#d9e8ff",
+        "primary-fixed": "#d2e4ff",
+        "secondary": "#7d5800", "secondary-container": "#ffbe3d",
+        "on-secondary-container": "#704e00",
+        "tertiary": "#295276", "tertiary-fixed": "#cfe5ff",
+        "surface": "#f8f9ff", "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3f9", "surface-container": "#ededf3",
+        "surface-container-high": "#e7e8ed", "surface-container-highest": "#e1e2e8",
+        "on-surface": "#191c20", "on-surface-variant": "#414750",
+        "outline": "#727781", "outline-variant": "#c1c7d1",
+        "background": "#f8f9ff", "error": "#ba1a1a", "error-container": "#ffdad6"
+      },
+      fontFamily: { "manrope": ["Manrope"], "inter": ["Inter"] }
+    }
+  }
+}
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+  .nav-active { border-right: 3px solid #003466; background-color: #ededf3; }
+  .field-error { border-color: #ba1a1a !important; }
+  .error-msg { color: #ba1a1a; font-size: 11px; margin-top: 4px; display: none; }
+  .error-msg.show { display: block; }
+</style>
+</head>
+<body class="bg-background font-inter text-on-surface">
+
+<!-- Sidebar -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest shadow-[2px_0_16px_rgba(0,0,0,0.06)] flex flex-col z-40" aria-label="Navigasi utama">
+  <div class="px-6 py-6 border-b border-outline-variant/30">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-[#003466] rounded-lg flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-lg" style="font-variation-settings:'FILL' 1;">balance</span>
+      </div>
+      <div>
+        <h1 class="text-base font-black text-[#003466] leading-tight font-manrope">Digital Jurist</h1>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-secondary">Akses Legal</p>
+      </div>
+    </div>
+  </div>
+  <nav class="flex-1 px-3 py-4 space-y-1" aria-label="Menu navigasi">
+    <a href="overview-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">dashboard</span>
+      <span class="text-sm font-manrope">Overview</span>
+    </a>
+    <a href="konsultasi-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">support_agent</span>
+      <span class="text-sm font-manrope">Konsultasi</span>
+    </a>
+    <a href="permohonansaya-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-[#003466] font-bold rounded-xl nav-active transition-all" aria-current="page">
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">assignment</span>
+      <span class="text-sm font-manrope">Permohonan Saya</span>
+    </a>
+    <a href="brankasdokumen-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">folder_open</span>
+      <span class="text-sm font-manrope">Dokumen Legal</span>
+    </a>
+    <a href="billing&harga-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">payments</span>
+      <span class="text-sm font-manrope">Billing &amp; Harga</span>
+    </a>
+    <a href="klaimpelaporanspt-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">receipt_long</span>
+      <span class="text-sm font-manrope">Pelaporan Pajak</span>
+    </a>
+  </nav>
+  <div class="px-3 pb-4 space-y-2">
+    <div class="px-3 py-3 bg-primary/5 rounded-xl border border-primary/10">
+      <p class="text-[10px] font-bold text-primary uppercase tracking-wider mb-2">Layanan Baru</p>
+      <a href="konsultasi-dekstop.html" class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#003466] text-white text-sm font-bold rounded-lg hover:bg-primary transition-all active:scale-95">
+        <span class="material-symbols-outlined text-sm">add</span>
+        Mulai Konsultasi
+      </a>
+    </div>
+    <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">help_outline</span>
+      <span class="font-manrope">Bantuan</span>
+    </a>
+    <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-error hover:bg-error-container/20 rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">logout</span>
+      <span class="font-manrope">Keluar</span>
+    </a>
+  </div>
+</aside>
+
+<!-- Main -->
+<div class="ml-64 min-h-screen flex flex-col">
+  <!-- Top Bar -->
+  <header class="sticky top-0 z-30 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm" aria-label="Header aplikasi">
+    <div class="flex items-center justify-between px-8 h-16">
+      <div class="flex-1 max-w-md">
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+          <input type="text" placeholder="Cari layanan..." aria-label="Cari layanan"
+            class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-full text-sm border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+        </div>
+      </div>
+      <div class="flex items-center gap-4 pl-6">
+        <button class="relative p-2 rounded-full hover:bg-surface-container transition-colors" aria-label="Notifikasi">
+          <span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+        </button>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-sm">BD</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 p-8 max-w-[900px] mx-auto w-full" aria-label="Formulir Klaim NIB">
+    <!-- Breadcrumb -->
+    <nav class="flex items-center gap-2 text-xs font-medium text-on-surface-variant/70 mb-6" aria-label="Breadcrumb">
+      <a href="overview-dekstop.html" class="hover:text-primary">Dashboard</a>
+      <span class="material-symbols-outlined text-sm">chevron_right</span>
+      <a href="permohonansaya-dekstop.html" class="hover:text-primary">Permohonan</a>
+      <span class="material-symbols-outlined text-sm">chevron_right</span>
+      <span class="text-primary font-bold">Klaim NIB</span>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="mb-8">
+      <h2 class="text-3xl font-black text-[#003466] font-manrope mb-2">Formulir Klaim NIB OSS</h2>
+      <p class="text-on-surface-variant text-sm leading-relaxed">Lengkapi detail perizinan Anda untuk melakukan klaim Nomor Induk Berusaha (NIB) secara resmi melalui sistem OSS Indonesia.</p>
+    </section>
+
+    <!-- Stepper -->
+    <div class="flex items-center gap-2 mb-8" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4" aria-label="Langkah 1 dari 4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-full bg-[#003466] text-white flex items-center justify-center text-sm font-bold">1</div>
+        <span class="text-sm font-bold text-[#003466]">Identitas</span>
+      </div>
+      <div class="flex-1 h-0.5 bg-outline-variant/40"></div>
+      <div class="flex items-center gap-2 opacity-40">
+        <div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-sm font-bold">2</div>
+        <span class="text-sm font-medium text-on-surface-variant">Detail Usaha</span>
+      </div>
+      <div class="flex-1 h-0.5 bg-outline-variant/40"></div>
+      <div class="flex items-center gap-2 opacity-40">
+        <div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-sm font-bold">3</div>
+        <span class="text-sm font-medium text-on-surface-variant">Kontak</span>
+      </div>
+      <div class="flex-1 h-0.5 bg-outline-variant/40"></div>
+      <div class="flex items-center gap-2 opacity-40">
+        <div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-sm font-bold">4</div>
+        <span class="text-sm font-medium text-on-surface-variant">KBLI</span>
+      </div>
+    </div>
+
+    <form id="nib-form" novalidate class="space-y-6">
+      <!-- Section 1: Identitas Pemilik -->
+      <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 shadow-sm" aria-label="Identitas Pemilik">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#003466]">badge</span>
+          </div>
+          <h3 class="text-base font-bold text-[#003466] font-manrope">Section 1: Identitas Pemilik</h3>
+        </div>
+        <div class="grid grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="nik">Nomor KTP (NIK) <span class="text-error">*</span></label>
+            <input type="text" id="nik" name="nik" maxlength="16" placeholder="Masukkan 16 digit NIK"
+              class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+              aria-required="true" aria-describedby="nik-error">
+            <p class="error-msg" id="nik-error" role="alert">NIK harus terdiri dari 16 digit</p>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="npwp">Nomor NPWP <span class="text-error">*</span></label>
+            <input type="text" id="npwp" name="npwp" maxlength="15" placeholder="Masukkan 15 digit NPWP"
+              class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+              aria-required="true" aria-describedby="npwp-error">
+            <p class="error-msg" id="npwp-error" role="alert">NPWP wajib diisi</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Detail Usaha -->
+      <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 shadow-sm" aria-label="Detail Usaha">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#003466]">location_on</span>
+          </div>
+          <h3 class="text-base font-bold text-[#003466] font-manrope">Section 2: Detail Usaha</h3>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="alamat">Alamat Lengkap Usaha <span class="text-error">*</span></label>
+          <textarea id="alamat" name="alamat" rows="3" placeholder="Jl. Raya Bisnis No. 123, Kelurahan, Kecamatan, Kota..."
+            class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none"
+            aria-required="true" aria-describedby="alamat-error"></textarea>
+          <p class="error-msg" id="alamat-error" role="alert">Alamat usaha wajib diisi</p>
+        </div>
+      </section>
+
+      <!-- Section 3: Kontak & Keamanan -->
+      <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 shadow-sm" aria-label="Kontak dan Keamanan">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#003466]">security</span>
+          </div>
+          <h3 class="text-base font-bold text-[#003466] font-manrope">Section 3: Kontak &amp; Keamanan</h3>
+        </div>
+        <div class="grid grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="phone">Nomor HP Aktif <span class="text-error">*</span></label>
+            <div class="flex gap-2">
+              <span class="bg-surface-container-high border border-outline-variant/40 px-3 py-3 rounded-lg text-sm font-bold text-on-surface-variant shrink-0">+62</span>
+              <input type="tel" id="phone" name="phone" placeholder="812345678"
+                class="flex-1 bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                aria-required="true" aria-describedby="phone-error">
+            </div>
+            <p class="error-msg" id="phone-error" role="alert">Nomor HP wajib diisi</p>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="email">Email <span class="text-error">*</span></label>
+            <input type="email" id="email" name="email" placeholder="nama@perusahaan.com"
+              class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+              aria-required="true" aria-describedby="email-error">
+            <p class="error-msg" id="email-error" role="alert">Email wajib diisi</p>
+          </div>
+          <div class="col-span-2">
+            <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="password">Password Pribadi <span class="text-error">*</span></label>
+            <div class="relative">
+              <input type="password" id="password" name="password" placeholder="••••••••"
+                class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                aria-required="true" aria-describedby="password-error">
+              <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary" aria-label="Tampilkan/sembunyikan password" onclick="togglePassword()">
+                <span class="material-symbols-outlined text-lg" id="pwd-icon">visibility_off</span>
+              </button>
+            </div>
+            <p class="error-msg" id="password-error" role="alert">Password wajib diisi</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: KBLI -->
+      <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 shadow-sm" aria-label="Klasifikasi KBLI">
+        <div class="flex items-center justify-between mb-5">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#003466]">category</span>
+            </div>
+            <h3 class="text-base font-bold text-[#003466] font-manrope">Section 4: Klasifikasi KBLI</h3>
+          </div>
+          <span class="text-xs font-bold px-3 py-1 bg-surface-container-high text-primary rounded-full uppercase tracking-tight">Maks. 5 KBLI</span>
+        </div>
+        <div id="kbli-list" class="space-y-3">
+          <div class="kbli-row grid grid-cols-4 gap-3 p-3 rounded-lg bg-surface-container-low">
+            <div>
+              <label class="block text-[10px] font-bold text-on-surface-variant uppercase mb-1">Kode KBLI</label>
+              <input type="text" placeholder="47111" class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-primary outline-none">
+            </div>
+            <div class="col-span-3 relative">
+              <label class="block text-[10px] font-bold text-on-surface-variant uppercase mb-1">Deskripsi Usaha</label>
+              <input type="text" placeholder="Perdagangan Eceran Berbagai Macam Barang..." class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-primary outline-none pr-10">
+              <button type="button" class="absolute right-2 top-7 text-error/40 hover:text-error transition-colors" aria-label="Hapus KBLI">
+                <span class="material-symbols-outlined text-lg">delete</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="add-kbli" class="mt-3 w-full py-3 border-2 border-dashed border-outline-variant/40 hover:border-primary hover:bg-primary-fixed/30 rounded-xl transition-all flex items-center justify-center gap-2 text-on-surface-variant hover:text-primary group">
+          <span class="material-symbols-outlined group-hover:scale-110 transition-transform">add_circle</span>
+          <span class="font-bold text-sm">Tambah Klasifikasi Bidang Usaha</span>
+        </button>
+      </section>
+
+      <!-- Footer -->
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 pt-4 border-t border-outline-variant/30">
+        <div class="flex items-start gap-3">
+          <input type="checkbox" id="terms" name="terms" class="mt-1 rounded text-primary focus:ring-primary h-4 w-4 border-outline-variant" aria-required="true">
+          <label for="terms" class="text-sm text-on-surface-variant leading-relaxed">
+            Saya menyatakan bahwa data yang saya berikan adalah benar dan dapat dipertanggungjawabkan sesuai dengan ketentuan hukum yang berlaku di Republik Indonesia.
+          </label>
+        </div>
+        <button type="submit" class="shrink-0 flex items-center gap-3 px-8 py-4 bg-[#003466] text-white font-black rounded-xl shadow-lg hover:bg-primary transition-all active:scale-95 font-manrope">
+          <span>Kirim Klaim Sekarang</span>
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">send</span>
+        </button>
+      </div>
+    </form>
+  </main>
+</div>
+
+<script>
+// Toggle password visibility
+function togglePassword() {
+  const pwd = document.getElementById('password');
+  const icon = document.getElementById('pwd-icon');
+  if (pwd.type === 'password') { pwd.type = 'text'; icon.textContent = 'visibility'; }
+  else { pwd.type = 'password'; icon.textContent = 'visibility_off'; }
+}
+
+// Add KBLI row
+let kbliCount = 1;
+document.getElementById('add-kbli').addEventListener('click', () => {
+  if (kbliCount >= 5) { alert('Maksimal 5 KBLI'); return; }
+  kbliCount++;
+  const row = document.createElement('div');
+  row.className = 'kbli-row grid grid-cols-4 gap-3 p-3 rounded-lg bg-surface-container-low';
+  row.innerHTML = `
+    <div>
+      <label class="block text-[10px] font-bold text-on-surface-variant uppercase mb-1">Kode KBLI</label>
+      <input type="text" placeholder="47111" class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-primary outline-none">
+    </div>
+    <div class="col-span-3 relative">
+      <label class="block text-[10px] font-bold text-on-surface-variant uppercase mb-1">Deskripsi Usaha</label>
+      <input type="text" placeholder="Deskripsi bidang usaha..." class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-primary outline-none pr-10">
+      <button type="button" class="absolute right-2 top-7 text-error/40 hover:text-error transition-colors" onclick="this.closest('.kbli-row').remove(); kbliCount--;" aria-label="Hapus KBLI">
+        <span class="material-symbols-outlined text-lg">delete</span>
+      </button>
+    </div>`;
+  document.getElementById('kbli-list').appendChild(row);
+});
+
+// Form validation
+document.getElementById('nib-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let valid = true;
+
+  // NIK validation
+  const nik = document.getElementById('nik');
+  const nikError = document.getElementById('nik-error');
+  if (!nik.value || nik.value.replace(/\D/g,'').length !== 16) {
+    nik.classList.add('field-error'); nikError.classList.add('show'); valid = false;
+  } else { nik.classList.remove('field-error'); nikError.classList.remove('show'); }
+
+  // Required fields
+  ['npwp', 'alamat', 'phone', 'email', 'password'].forEach(id => {
+    const el = document.getElementById(id);
+    const err = document.getElementById(id + '-error');
+    if (!el.value.trim()) {
+      el.classList.add('field-error'); if(err) err.classList.add('show'); valid = false;
+    } else { el.classList.remove('field-error'); if(err) err.classList.remove('show'); }
+  });
+
+  // Terms
+  if (!document.getElementById('terms').checked) {
+    alert('Harap centang pernyataan kebenaran data terlebih dahulu.'); valid = false;
+  }
+
+  if (valid) { window.location.href = 'klaimberhasil-dekstop.html'; }
+});
+
+// NIK: only digits
+document.getElementById('nik').addEventListener('input', function() {
+  this.value = this.value.replace(/\D/g, '');
+});
+</script>
+</body>
+</html>

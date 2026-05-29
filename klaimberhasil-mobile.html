@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Klaim Berhasil | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#00518c", "on-primary": "#ffffff",
+        "primary-container": "#2a6aa7", "primary-fixed": "#d2e4ff",
+        "on-primary-fixed": "#001d36",
+        "secondary": "#7d5800", "secondary-container": "#ffbe3d",
+        "on-secondary-container": "#704e00",
+        "tertiary": "#295276", "tertiary-fixed": "#cfe5ff",
+        "surface": "#f8f9ff", "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3f9", "surface-container": "#ededf3",
+        "surface-container-high": "#e7e8ed", "surface-container-highest": "#e1e2e8",
+        "surface-dim": "#d9dadf",
+        "on-surface": "#191c20", "on-surface-variant": "#414750",
+        "outline": "#727781", "outline-variant": "#c1c7d1",
+        "background": "#f8f9ff", "error": "#ba1a1a"
+      }
+    }
+  }
+}
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  body { min-height: max(844px, 100dvh); }
+  @keyframes pulse-ring { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.6); opacity: 0; } }
+  .pulse-ring { animation: pulse-ring 2s ease-out infinite; }
+</style>
+</head>
+<body class="bg-background text-on-surface font-inter min-h-screen flex flex-col">
+
+<main class="flex-1 flex flex-col items-center justify-center px-4 py-8 space-y-6" aria-label="Halaman klaim berhasil">
+
+  <!-- Brand -->
+  <div class="flex items-center gap-2">
+    <div class="w-8 h-8 bg-[#003466] rounded-lg flex items-center justify-center">
+      <span class="material-symbols-outlined text-white text-base" style="font-variation-settings:'FILL' 1;">balance</span>
+    </div>
+    <span class="font-black text-[#003466] font-manrope">Akses Legal Indonesia</span>
+  </div>
+
+  <!-- Success Icon -->
+  <div class="relative w-24 h-24 flex items-center justify-center">
+    <div class="absolute inset-0 rounded-full bg-primary-fixed pulse-ring"></div>
+    <div class="w-24 h-24 bg-primary-fixed rounded-full flex items-center justify-center relative z-10">
+      <span class="material-symbols-outlined text-[#003466] text-5xl" style="font-variation-settings:'FILL' 1;">check_circle</span>
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div class="text-center">
+    <h1 class="text-2xl font-black text-on-surface font-manrope mb-2">Pengajuan Berhasil!</h1>
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-surface-container rounded-full">
+      <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Transaction ID</span>
+      <span class="text-sm font-mono text-primary font-bold">AX-9920384711</span>
+    </div>
+  </div>
+
+  <!-- Summary Card -->
+  <div class="w-full bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-5 shadow-sm space-y-3">
+    <div class="grid grid-cols-2 gap-3">
+      <div class="bg-surface-container-low p-3 rounded-lg">
+        <p class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">Jenis Layanan</p>
+        <p class="font-bold text-sm text-on-surface font-manrope">Pendaftaran NIB</p>
+      </div>
+      <div class="bg-surface-container-low p-3 rounded-lg">
+        <p class="text-[10px] font-bold text-on-surface-variant uppercase mb-1">Nama Entitas</p>
+        <p class="font-bold text-sm text-on-surface font-manrope truncate">PT. Global Tech</p>
+      </div>
+    </div>
+    <div class="bg-primary-fixed p-4 rounded-lg">
+      <p class="text-[10px] font-bold text-on-primary-fixed uppercase mb-1">Waktu Pengiriman</p>
+      <p class="font-bold text-[#003466] font-manrope">24 Okt 2023 | 14:32 WIB</p>
+    </div>
+  </div>
+
+  <!-- Audit Trail -->
+  <div class="w-full bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm">
+    <p class="text-[10px] font-black text-on-surface-variant uppercase tracking-wider mb-3">Audit Trail Tracking</p>
+    <div class="flex items-center gap-2">
+      <div class="flex flex-col items-center gap-1">
+        <div class="w-3 h-3 rounded-full bg-[#003466]"></div>
+        <div class="w-0.5 h-6 bg-[#003466]"></div>
+        <div class="w-3 h-3 rounded-full bg-[#003466]"></div>
+        <div class="w-0.5 h-6 bg-[#003466]"></div>
+        <div class="w-3 h-3 rounded-full bg-[#003466]"></div>
+        <div class="w-0.5 h-6 bg-surface-dim"></div>
+        <div class="w-3 h-3 rounded-full bg-surface-dim"></div>
+      </div>
+      <div class="flex-1 space-y-3">
+        <div class="py-1"><p class="text-sm font-bold text-on-surface">Validation</p><p class="text-xs text-on-surface-variant">Data terverifikasi</p></div>
+        <div class="py-1"><p class="text-sm font-bold text-on-surface">Entry</p><p class="text-xs text-on-surface-variant">Data dimasukkan sistem</p></div>
+        <div class="py-1"><p class="text-sm font-bold text-on-surface">Seal Applied</p><p class="text-xs text-on-surface-variant">Dokumen disegel digital</p></div>
+        <div class="py-1"><p class="text-sm font-medium text-on-surface-variant">Archiving</p><p class="text-xs text-on-surface-variant">Sedang diproses...</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="w-full space-y-3">
+    <button class="w-full py-3.5 bg-[#003466] text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-primary transition-all active:scale-95 font-manrope min-h-[52px]">
+      <span class="material-symbols-outlined">download</span>
+      Download Legal Receipt
+    </button>
+    <a href="overview-mobile.html" class="w-full py-3.5 bg-surface-container-highest text-primary font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-surface-container-high transition-all active:scale-95 font-manrope min-h-[52px]">
+      <span class="material-symbols-outlined">dashboard</span>
+      Kembali ke Dashboard
+    </a>
+  </div>
+
+</main>
+
+</body>
+</html>

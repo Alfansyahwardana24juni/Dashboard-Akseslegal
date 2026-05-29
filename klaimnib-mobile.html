@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Klaim NIB | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#00518c", "on-primary": "#ffffff",
+        "primary-container": "#2a6aa7", "primary-fixed": "#d2e4ff",
+        "secondary": "#7d5800", "secondary-container": "#ffbe3d",
+        "on-secondary-container": "#704e00",
+        "surface": "#f8f9ff", "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3f9", "surface-container": "#ededf3",
+        "surface-container-high": "#e7e8ed", "surface-container-highest": "#e1e2e8",
+        "on-surface": "#191c20", "on-surface-variant": "#414750",
+        "outline": "#727781", "outline-variant": "#c1c7d1",
+        "background": "#f8f9ff", "error": "#ba1a1a", "error-container": "#ffdad6"
+      }
+    }
+  }
+}
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  body { min-height: max(844px, 100dvh); }
+  .field-error { border-color: #ba1a1a !important; }
+  .error-msg { color: #ba1a1a; font-size: 11px; margin-top: 4px; display: none; }
+  .error-msg.show { display: block; }
+</style>
+</head>
+<body class="bg-background text-on-surface font-inter pb-8">
+
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm" aria-label="Header aplikasi">
+  <div class="flex items-center justify-between px-4 h-14">
+    <div class="flex items-center gap-3">
+      <a href="overview-mobile.html" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container" aria-label="Kembali">
+        <span class="material-symbols-outlined text-primary">arrow_back</span>
+      </a>
+      <h1 class="text-sm font-black text-[#003466] font-manrope">Klaim NIB</h1>
+    </div>
+    <button class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container" aria-label="Notifikasi">
+      <span class="material-symbols-outlined text-primary">notifications</span>
+      <span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+    </button>
+  </div>
+</header>
+
+<main class="pt-16 px-4" aria-label="Formulir Klaim NIB">
+  <section class="mt-4 mb-5">
+    <h2 class="text-xl font-black text-[#003466] font-manrope">Formulir Klaim NIB OSS</h2>
+    <p class="text-sm text-on-surface-variant mt-1">Lengkapi data untuk mendaftarkan Nomor Induk Berusaha.</p>
+  </section>
+
+  <!-- Stepper -->
+  <div class="flex items-center gap-1 mb-6" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4" aria-label="Langkah 1 dari 4">
+    <div class="w-8 h-8 rounded-full bg-[#003466] text-white flex items-center justify-center text-xs font-bold shrink-0">1</div>
+    <div class="flex-1 h-0.5 bg-[#003466]"></div>
+    <div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-xs font-bold shrink-0 opacity-40">2</div>
+    <div class="flex-1 h-0.5 bg-outline-variant/40"></div>
+    <div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-xs font-bold shrink-0 opacity-40">3</div>
+    <div class="flex-1 h-0.5 bg-outline-variant/40"></div>
+    <div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-xs font-bold shrink-0 opacity-40">4</div>
+  </div>
+
+  <form id="nib-form-mobile" novalidate class="space-y-5">
+    <!-- Section 1 -->
+    <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm" aria-label="Identitas Pemilik">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center">
+          <span class="material-symbols-outlined text-[#003466] text-base">badge</span>
+        </div>
+        <h3 class="text-sm font-bold text-[#003466] font-manrope">Identitas Pemilik</h3>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="nik-m">NIK (16 digit) <span class="text-error">*</span></label>
+          <input type="text" id="nik-m" inputmode="numeric" maxlength="16" placeholder="Masukkan 16 digit NIK"
+            class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all min-h-[48px]"
+            aria-required="true" aria-describedby="nik-m-error">
+          <p class="error-msg" id="nik-m-error" role="alert">NIK harus terdiri dari 16 digit</p>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="npwp-m">Nomor NPWP <span class="text-error">*</span></label>
+          <input type="text" id="npwp-m" inputmode="numeric" maxlength="15" placeholder="Masukkan 15 digit NPWP"
+            class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all min-h-[48px]"
+            aria-required="true" aria-describedby="npwp-m-error">
+          <p class="error-msg" id="npwp-m-error" role="alert">NPWP wajib diisi</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm" aria-label="Detail Usaha">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center">
+          <span class="material-symbols-outlined text-[#003466] text-base">location_on</span>
+        </div>
+        <h3 class="text-sm font-bold text-[#003466] font-manrope">Detail Usaha</h3>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="alamat-m">Alamat Lengkap Usaha <span class="text-error">*</span></label>
+        <textarea id="alamat-m" rows="3" placeholder="Jl. Raya Bisnis No. 123, Kelurahan, Kecamatan, Kota..."
+          class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none"
+          aria-required="true" aria-describedby="alamat-m-error"></textarea>
+        <p class="error-msg" id="alamat-m-error" role="alert">Alamat usaha wajib diisi</p>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm" aria-label="Kontak dan Keamanan">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center">
+          <span class="material-symbols-outlined text-[#003466] text-base">security</span>
+        </div>
+        <h3 class="text-sm font-bold text-[#003466] font-manrope">Kontak &amp; Keamanan</h3>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="phone-m">Nomor HP Aktif <span class="text-error">*</span></label>
+          <div class="flex gap-2">
+            <span class="bg-surface-container-high border border-outline-variant/40 px-3 py-3 rounded-lg text-sm font-bold text-on-surface-variant shrink-0 min-h-[48px] flex items-center">+62</span>
+            <input type="tel" id="phone-m" placeholder="812345678"
+              class="flex-1 bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all min-h-[48px]"
+              aria-required="true">
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="email-m">Email <span class="text-error">*</span></label>
+          <input type="email" id="email-m" placeholder="nama@perusahaan.com"
+            class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all min-h-[48px]"
+            aria-required="true">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="pwd-m">Password Pribadi <span class="text-error">*</span></label>
+          <input type="password" id="pwd-m" placeholder="••••••••"
+            class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all min-h-[48px]"
+            aria-required="true">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: KBLI -->
+    <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm" aria-label="Klasifikasi KBLI">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#003466] text-base">category</span>
+          </div>
+          <h3 class="text-sm font-bold text-[#003466] font-manrope">Klasifikasi KBLI</h3>
+        </div>
+        <span class="text-[10px] font-bold text-primary bg-primary-fixed px-2 py-0.5 rounded-full">Maks. 5</span>
+      </div>
+      <div class="space-y-3">
+        <div class="grid grid-cols-3 gap-2 p-3 bg-surface-container-low rounded-lg">
+          <div>
+            <label class="block text-[10px] font-bold text-on-surface-variant uppercase mb-1">Kode</label>
+            <input type="text" placeholder="47111" class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-2 py-2 text-sm focus:ring-1 focus:ring-primary outline-none min-h-[44px]">
+          </div>
+          <div class="col-span-2">
+            <label class="block text-[10px] font-bold text-on-surface-variant uppercase mb-1">Deskripsi</label>
+            <input type="text" placeholder="Deskripsi usaha..." class="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-lg px-2 py-2 text-sm focus:ring-1 focus:ring-primary outline-none min-h-[44px]">
+          </div>
+        </div>
+      </div>
+      <button type="button" class="mt-3 w-full py-3 border-2 border-dashed border-outline-variant/40 hover:border-primary rounded-xl flex items-center justify-center gap-2 text-on-surface-variant hover:text-primary transition-all min-h-[48px]">
+        <span class="material-symbols-outlined text-base">add_circle</span>
+        <span class="text-sm font-bold">Tambah KBLI</span>
+      </button>
+    </section>
+
+    <!-- Terms & Submit -->
+    <div class="space-y-4">
+      <div class="flex items-start gap-3 p-4 bg-surface-container-lowest rounded-xl border border-outline-variant/40">
+        <input type="checkbox" id="terms-m" class="mt-1 rounded text-primary focus:ring-primary h-5 w-5 border-outline-variant shrink-0" aria-required="true">
+        <label for="terms-m" class="text-sm text-on-surface-variant leading-relaxed">
+          Saya menyatakan bahwa data yang saya berikan adalah benar dan dapat dipertanggungjawabkan sesuai ketentuan hukum yang berlaku.
+        </label>
+      </div>
+      <button type="submit" class="w-full py-4 bg-[#003466] text-white font-black rounded-xl flex items-center justify-center gap-2 hover:bg-primary transition-all active:scale-95 font-manrope min-h-[56px]">
+        <span>Kirim Klaim Sekarang</span>
+        <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">send</span>
+      </button>
+    </div>
+  </form>
+</main>
+
+<script>
+document.getElementById('nib-form-mobile').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let valid = true;
+  const nik = document.getElementById('nik-m');
+  const nikErr = document.getElementById('nik-m-error');
+  if (!nik.value || nik.value.replace(/\D/g,'').length !== 16) {
+    nik.classList.add('field-error'); nikErr.classList.add('show'); valid = false;
+  } else { nik.classList.remove('field-error'); nikErr.classList.remove('show'); }
+
+  ['npwp-m', 'alamat-m', 'phone-m', 'email-m', 'pwd-m'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && !el.value.trim()) { el.classList.add('field-error'); valid = false; }
+    else if (el) el.classList.remove('field-error');
+  });
+
+  if (!document.getElementById('terms-m').checked) {
+    alert('Harap centang pernyataan kebenaran data.'); valid = false;
+  }
+
+  if (valid) window.location.href = 'klaimberhasil-mobile.html';
+});
+
+document.getElementById('nik-m').addEventListener('input', function() {
+  this.value = this.value.replace(/\D/g, '');
+});
+</script>
+</body>
+</html>

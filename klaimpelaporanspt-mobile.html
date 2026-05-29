@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pelaporan SPT | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#00518c", "on-primary": "#ffffff",
+        "primary-container": "#2a6aa7", "primary-fixed": "#d2e4ff",
+        "secondary": "#7d5800", "secondary-container": "#ffbe3d",
+        "on-secondary-container": "#704e00",
+        "tertiary": "#295276",
+        "surface": "#f8f9ff", "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3f9", "surface-container": "#ededf3",
+        "surface-container-high": "#e7e8ed", "surface-container-highest": "#e1e2e8",
+        "on-surface": "#191c20", "on-surface-variant": "#414750",
+        "outline": "#727781", "outline-variant": "#c1c7d1",
+        "background": "#f8f9ff", "error": "#ba1a1a", "error-container": "#ffdad6"
+      }
+    }
+  }
+}
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  body { min-height: max(844px, 100dvh); }
+  .field-error { border-color: #ba1a1a !important; }
+</style>
+</head>
+<body class="bg-background text-on-surface font-inter pb-8">
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm" aria-label="Header aplikasi">
+  <div class="flex items-center justify-between px-4 h-14">
+    <div class="flex items-center gap-3">
+      <a href="overview-mobile.html" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container" aria-label="Kembali">
+        <span class="material-symbols-outlined text-primary">arrow_back</span>
+      </a>
+      <h1 class="text-sm font-black text-[#003466] font-manrope">Laporan SPT</h1>
+    </div>
+    <button class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container" aria-label="Notifikasi">
+      <span class="material-symbols-outlined text-primary">notifications</span>
+      <span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+    </button>
+  </div>
+</header>
+
+<main class="pt-16 px-4" aria-label="Formulir Pelaporan SPT">
+  <section class="mt-4 mb-5">
+    <h2 class="text-xl font-black text-[#003466] font-manrope">Klaim Laporan SPT</h2>
+    <p class="text-sm text-on-surface-variant mt-1">Lengkapi data untuk pelaporan Surat Pemberitahuan Tahunan.</p>
+  </section>
+
+  <!-- Stepper -->
+  <div class="flex items-center gap-1 mb-6" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" aria-label="Langkah 1 dari 3">
+    <div class="w-8 h-8 rounded-full bg-[#003466] text-white flex items-center justify-center text-xs font-bold shrink-0">1</div>
+    <div class="flex-1 h-0.5 bg-[#003466]"></div>
+    <div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-xs font-bold shrink-0 opacity-40">2</div>
+    <div class="flex-1 h-0.5 bg-outline-variant/40"></div>
+    <div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-xs font-bold shrink-0 opacity-40">3</div>
+  </div>
+
+  <form id="spt-form-m" novalidate class="space-y-5">
+    <!-- Identitas Pajak -->
+    <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm" aria-label="Identitas Pajak">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center">
+          <span class="material-symbols-outlined text-[#003466] text-base">badge</span>
+        </div>
+        <h3 class="text-sm font-bold text-[#003466] font-manrope">Identitas Pajak</h3>
+      </div>
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="tahun-m">Tahun Pajak <span class="text-error">*</span></label>
+          <select id="tahun-m"
+            class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all min-h-[48px]"
+            aria-required="true">
+            <option value="">Pilih tahun pajak</option>
+            <option>2023</option>
+            <option>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="jenis-spt-m">Jenis SPT <span class="text-error">*</span></label>
+          <select id="jenis-spt-m"
+            class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all min-h-[48px]"
+            aria-required="true">
+            <option value="">Pilih jenis SPT</option>
+            <option>SPT Tahunan Badan</option>
+            <option>SPT Masa PPN</option>
+            <option>SPT Masa PPh 21</option>
+            <option>SPT Masa PPh 23</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5" for="npwp-m">NPWP Badan <span class="text-error">*</span></label>
+          <input type="text" id="npwp-m" placeholder="00.000.000.0-000.000"
+            class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all min-h-[48px]"
+            aria-required="true">
+        </div>
+      </div>
+    </section>
+
+    <!-- Unggah Dokumen -->
+    <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm" aria-label="Unggah Dokumen">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center">
+          <span class="material-symbols-outlined text-[#003466] text-base">cloud_upload</span>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-[#003466] font-manrope">Dokumen Pendukung</h3>
+          <p class="text-[10px] text-on-surface-variant">PDF, JPG, PNG (Maks. 5MB)</p>
+        </div>
+      </div>
+      <div class="space-y-3">
+        <label class="cursor-pointer flex items-center gap-3 p-3 border-2 border-dashed border-outline-variant/40 rounded-xl hover:border-primary hover:bg-primary-fixed/20 transition-all min-h-[56px]" for="doc1-m">
+          <span class="material-symbols-outlined text-primary-container text-2xl">upload_file</span>
+          <div>
+            <p class="text-sm font-bold text-on-surface">Bukti Potong 1721 A1</p>
+            <p class="text-[10px] text-on-surface-variant">Klik untuk unggah</p>
+          </div>
+          <input type="file" id="doc1-m" class="hidden" accept=".pdf,.jpg,.png" aria-label="Unggah Bukti Potong 1721 A1">
+        </label>
+        <label class="cursor-pointer flex items-center gap-3 p-3 border-2 border-dashed border-outline-variant/40 rounded-xl hover:border-primary hover:bg-primary-fixed/20 transition-all min-h-[56px]" for="doc2-m">
+          <span class="material-symbols-outlined text-primary-container text-2xl">receipt_long</span>
+          <div>
+            <p class="text-sm font-bold text-on-surface">Rekap Penghasilan</p>
+            <p class="text-[10px] text-on-surface-variant">Klik untuk unggah</p>
+          </div>
+          <input type="file" id="doc2-m" class="hidden" accept=".pdf,.jpg,.png" aria-label="Unggah Rekap Penghasilan">
+        </label>
+        <label class="cursor-pointer flex items-center gap-3 p-3 border-2 border-dashed border-outline-variant/40 rounded-xl hover:border-primary hover:bg-primary-fixed/20 transition-all min-h-[56px]" for="doc3-m">
+          <span class="material-symbols-outlined text-primary-container text-2xl">contract</span>
+          <div>
+            <p class="text-sm font-bold text-on-surface">Bukti Potong PPh 23</p>
+            <p class="text-[10px] text-on-surface-variant">Klik untuk unggah</p>
+          </div>
+          <input type="file" id="doc3-m" class="hidden" accept=".pdf,.jpg,.png" aria-label="Unggah Bukti Potong PPh 23">
+        </label>
+      </div>
+    </section>
+
+    <button type="submit" class="w-full py-4 bg-[#003466] text-white font-black rounded-xl flex items-center justify-center gap-2 hover:bg-primary transition-all active:scale-95 font-manrope min-h-[56px]">
+      <span>Kirim Laporan SPT</span>
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">send</span>
+    </button>
+  </form>
+</main>
+
+<script>
+document.getElementById('spt-form-m').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let valid = true;
+  ['tahun-m', 'jenis-spt-m', 'npwp-m'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && !el.value.trim()) { el.classList.add('field-error'); valid = false; }
+    else if (el) el.classList.remove('field-error');
+  });
+  if (valid) window.location.href = 'klaimberhasil-mobile.html';
+});
+</script>
+</body>
+</html>

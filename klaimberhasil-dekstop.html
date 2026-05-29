@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Klaim Berhasil | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#00518c", "on-primary": "#ffffff",
+        "primary-container": "#2a6aa7", "on-primary-container": "#d9e8ff",
+        "primary-fixed": "#d2e4ff", "primary-fixed-dim": "#9fcaff",
+        "on-primary-fixed": "#001d36",
+        "secondary": "#7d5800", "secondary-container": "#ffbe3d",
+        "on-secondary-container": "#704e00", "secondary-fixed": "#ffdea9",
+        "tertiary": "#295276", "tertiary-fixed": "#cfe5ff",
+        "surface": "#f8f9ff", "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3f9", "surface-container": "#ededf3",
+        "surface-container-high": "#e7e8ed", "surface-container-highest": "#e1e2e8",
+        "surface-dim": "#d9dadf",
+        "on-surface": "#191c20", "on-surface-variant": "#414750",
+        "outline": "#727781", "outline-variant": "#c1c7d1",
+        "background": "#f8f9ff", "error": "#ba1a1a"
+      },
+      fontFamily: { "manrope": ["Manrope"], "inter": ["Inter"] }
+    }
+  }
+}
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+  @keyframes pulse-ring { 0% { transform: scale(1); opacity: 0.4; } 100% { transform: scale(1.5); opacity: 0; } }
+  .pulse-ring { animation: pulse-ring 2s ease-out infinite; }
+</style>
+</head>
+<body class="bg-background font-inter text-on-surface min-h-screen flex items-center justify-center p-6">
+
+<!-- Background decorative -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden">
+  <div class="absolute top-[-10%] right-[-5%] w-[50%] h-[70%] bg-primary-fixed rounded-full blur-3xl opacity-30"></div>
+  <div class="absolute bottom-[-10%] left-[-5%] w-[40%] h-[60%] bg-tertiary-fixed rounded-full blur-3xl opacity-20"></div>
+</div>
+
+<main class="relative z-10 w-full max-w-4xl" aria-label="Halaman klaim berhasil">
+  <div class="grid grid-cols-12 gap-8 items-center">
+
+    <!-- Left Column - Branding -->
+    <div class="col-span-5 flex flex-col justify-between py-8">
+      <div>
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-9 h-9 bg-[#003466] rounded-lg flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-lg" style="font-variation-settings:'FILL' 1;">balance</span>
+          </div>
+          <span class="text-xl font-black text-[#003466] font-manrope">Akses Legal</span>
+        </div>
+        <h1 class="text-5xl font-black text-on-surface font-manrope leading-tight mb-4 tracking-tight">
+          Klaim<br><span class="text-[#003466]">Tervalidasi.</span>
+        </h1>
+        <p class="text-on-surface-variant text-base leading-relaxed max-w-xs">
+          Pengajuan layanan legal Anda telah diproses oleh jaringan Digital Jurist kami. Tepat. Resmi. Aman.
+        </p>
+      </div>
+      <div class="flex items-center gap-3 text-primary mt-8">
+        <span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1;">verified</span>
+        <span class="font-bold text-xs uppercase tracking-widest">Editorial Authority Certified</span>
+      </div>
+    </div>
+
+    <!-- Right Column - Card -->
+    <div class="col-span-7">
+      <div class="bg-surface-container-lowest rounded-2xl p-10 shadow-[0_32px_64px_-12px_rgba(26,28,32,0.1)] border border-outline-variant/20 relative overflow-hidden">
+
+        <!-- Success Icon -->
+        <div class="flex flex-col items-center text-center mb-8">
+          <div class="relative w-24 h-24 flex items-center justify-center mb-5">
+            <div class="absolute inset-0 rounded-full bg-primary-fixed pulse-ring"></div>
+            <div class="w-24 h-24 bg-primary-fixed rounded-full flex items-center justify-center relative z-10">
+              <span class="material-symbols-outlined text-[#003466] text-5xl" style="font-variation-settings:'FILL' 1;">check_circle</span>
+            </div>
+          </div>
+          <h2 class="text-2xl font-bold text-on-surface font-manrope mb-2">Pengajuan Berhasil!</h2>
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-surface-container-low rounded-full">
+            <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Transaction ID</span>
+            <span class="text-sm font-mono text-primary font-bold tracking-wider">AX-9920384711</span>
+          </div>
+        </div>
+
+        <!-- Summary Grid -->
+        <div class="grid grid-cols-2 gap-3 mb-8">
+          <div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/30 hover:border-primary-fixed transition-colors">
+            <p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider mb-1">Jenis Layanan</p>
+            <p class="font-bold text-on-surface font-manrope">Pendaftaran NIB</p>
+          </div>
+          <div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/30 hover:border-primary-fixed transition-colors">
+            <p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider mb-1">Nama Entitas</p>
+            <p class="font-bold text-on-surface font-manrope truncate">PT. Global Tech Solusi</p>
+          </div>
+          <div class="col-span-2 bg-primary-fixed p-5 rounded-xl relative overflow-hidden group">
+            <div class="relative z-10 flex justify-between items-center">
+              <div>
+                <p class="text-[10px] font-bold text-on-primary-fixed uppercase tracking-wider mb-1">Waktu Pengiriman</p>
+                <p class="font-bold text-[#003466] text-lg font-manrope">24 Okt 2023 | 14:32 WIB</p>
+              </div>
+              <span class="material-symbols-outlined text-[#003466]/40 text-4xl group-hover:scale-110 transition-transform">schedule</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="space-y-3">
+          <button class="w-full h-13 bg-[#003466] text-white font-bold rounded-xl flex items-center justify-center gap-3 hover:bg-primary transition-all active:scale-[0.98] py-3.5 font-manrope">
+            <span class="material-symbols-outlined">download</span>
+            Download Legal Receipt
+          </button>
+          <div class="grid grid-cols-2 gap-3">
+            <button class="h-12 border border-outline-variant/40 text-on-surface font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-surface-container transition-colors text-sm font-manrope">
+              <span class="material-symbols-outlined text-sm">print</span>
+              Cetak Salinan
+            </button>
+            <a href="overview-dekstop.html" class="h-12 bg-surface-container-highest text-primary font-bold rounded-xl flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors text-sm font-manrope">
+              <span class="material-symbols-outlined text-sm">dashboard</span>
+              Kembali ke Dashboard
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audit Trail -->
+  <div class="mt-16 w-full">
+    <div class="flex items-center gap-6">
+      <span class="text-[10px] font-black text-on-surface-variant uppercase tracking-[0.3em] shrink-0">Audit Trail</span>
+      <div class="flex-1 h-px bg-outline-variant/30"></div>
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-2">
+          <div class="w-2.5 h-2.5 rounded-full bg-[#003466]"></div>
+          <span class="text-xs font-bold text-on-surface">Validation</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-2.5 h-2.5 rounded-full bg-[#003466]"></div>
+          <span class="text-xs font-bold text-on-surface">Entry</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-2.5 h-2.5 rounded-full bg-[#003466]"></div>
+          <span class="text-xs font-bold text-on-surface">Seal Applied</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-2.5 h-2.5 rounded-full bg-surface-dim"></div>
+          <span class="text-xs font-medium text-on-surface-variant">Archiving</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

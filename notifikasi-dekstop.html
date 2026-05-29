@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Notifikasi | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config={darkMode:"class",theme:{extend:{colors:{
+  "primary":"#00518c","on-primary":"#ffffff","primary-container":"#2a6aa7",
+  "on-primary-container":"#d9e8ff","primary-fixed":"#d2e4ff",
+  "secondary":"#7d5800","secondary-container":"#ffbe3d","on-secondary-container":"#704e00",
+  "tertiary":"#295276","tertiary-fixed":"#cfe5ff",
+  "surface":"#f8f9ff","surface-container-lowest":"#ffffff","surface-container-low":"#f2f3f9",
+  "surface-container":"#ededf3","surface-container-high":"#e7e8ed","surface-container-highest":"#e1e2e8",
+  "on-surface":"#191c20","on-surface-variant":"#414750","outline":"#727781",
+  "outline-variant":"#c1c7d1","background":"#f8f9ff","error":"#ba1a1a","error-container":"#ffdad6"
+},fontFamily:{"manrope":["Manrope"],"inter":["Inter"]}}}}
+</script>
+<style>
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle;}
+  .nav-active{border-right:3px solid #003466;background-color:#ededf3;}
+  .notif-unread{background-color:#f0f5ff;border-left:3px solid #00518c;}
+</style>
+</head>
+<body class="bg-background font-inter text-on-surface">
+
+<!-- Sidebar -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest shadow-[2px_0_16px_rgba(0,0,0,0.06)] flex flex-col z-40" aria-label="Navigasi utama">
+  <div class="px-6 py-6 border-b border-outline-variant/30">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-[#003466] rounded-lg flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-lg" style="font-variation-settings:'FILL' 1;">balance</span>
+      </div>
+      <div>
+        <h1 class="text-base font-black text-[#003466] leading-tight font-manrope">Digital Jurist</h1>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-secondary">Akses Legal</p>
+      </div>
+    </div>
+  </div>
+  <nav class="flex-1 px-3 py-4 space-y-1" aria-label="Menu navigasi">
+    <a href="overview-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">dashboard</span><span class="text-sm font-manrope">Overview</span>
+    </a>
+    <a href="konsultasi-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">support_agent</span><span class="text-sm font-manrope">Konsultasi</span>
+    </a>
+    <a href="permohonansaya-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">assignment</span><span class="text-sm font-manrope">Permohonan Saya</span>
+    </a>
+    <a href="brankasdokumen-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">folder_open</span><span class="text-sm font-manrope">Dokumen Legal</span>
+    </a>
+    <a href="billing&harga-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">payments</span><span class="text-sm font-manrope">Billing &amp; Harga</span>
+    </a>
+    <a href="pelaporanpajak-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">receipt_long</span><span class="text-sm font-manrope">Pelaporan Pajak</span>
+    </a>
+  </nav>
+  <div class="px-3 pb-4 space-y-2">
+    <div class="px-3 py-3 bg-primary/5 rounded-xl border border-primary/10">
+      <p class="text-[10px] font-bold text-primary uppercase tracking-wider mb-2">Layanan Baru</p>
+      <a href="konsultasi-dekstop.html" class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#003466] text-white text-sm font-bold rounded-lg hover:bg-primary transition-all active:scale-95">
+        <span class="material-symbols-outlined text-sm">add</span>Mulai Konsultasi
+      </a>
+    </div>
+    <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">help_outline</span><span class="font-manrope">Bantuan</span>
+    </a>
+    <a href="login.html" class="flex items-center gap-3 px-4 py-2.5 text-error hover:bg-error-container/20 rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">logout</span><span class="font-manrope">Keluar</span>
+    </a>
+  </div>
+</aside>
+
+<!-- Main -->
+<div class="ml-64 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-30 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm" aria-label="Header aplikasi">
+    <div class="flex items-center justify-between px-8 h-16">
+      <div class="flex-1 max-w-md">
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+          <input type="text" placeholder="Cari layanan..." aria-label="Cari layanan" class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-full text-sm border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+        </div>
+      </div>
+      <div class="flex items-center gap-4 pl-6">
+        <button class="relative p-2 rounded-full bg-surface-container transition-colors" aria-label="Notifikasi" aria-current="page">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">notifications</span>
+        </button>
+        <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='profil-dekstop.html'">
+          <div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-sm">BD</div>
+          <div class="hidden lg:block">
+            <p class="text-sm font-bold text-on-surface leading-none">Budi Darmawan</p>
+            <p class="text-[10px] text-on-surface-variant">Direktur Utama</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 p-8 max-w-[800px] mx-auto w-full" aria-label="Notifikasi">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="text-3xl font-black text-[#003466] font-manrope mb-1">Notifikasi</h2>
+        <p class="text-on-surface-variant text-sm">3 notifikasi belum dibaca</p>
+      </div>
+      <button id="mark-all-read" class="flex items-center gap-2 text-primary text-sm font-bold hover:underline min-h-[44px] px-2">
+        <span class="material-symbols-outlined text-base">done_all</span>
+        Tandai Semua Dibaca
+      </button>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="flex gap-2 mb-6" role="tablist" aria-label="Filter notifikasi">
+      <button role="tab" aria-selected="true" class="filter-tab px-4 py-2 rounded-full bg-[#003466] text-white text-xs font-bold min-h-[44px]" data-filter="all">Semua (6)</button>
+      <button role="tab" aria-selected="false" class="filter-tab px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-bold min-h-[44px] hover:bg-surface-container-highest transition-colors" data-filter="unread">Belum Dibaca (3)</button>
+      <button role="tab" aria-selected="false" class="filter-tab px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-bold min-h-[44px] hover:bg-surface-container-highest transition-colors" data-filter="pajak">Pajak</button>
+      <button role="tab" aria-selected="false" class="filter-tab px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-bold min-h-[44px] hover:bg-surface-container-highest transition-colors" data-filter="permohonan">Permohonan</button>
+    </div>
+
+    <!-- Notifications List -->
+    <div class="space-y-3" id="notif-list" role="list">
+
+      <!-- Unread: Tenggat Pajak -->
+      <div class="notif-unread rounded-xl p-5 shadow-sm flex gap-4 cursor-pointer hover:bg-blue-50 transition-colors" role="listitem">
+        <div class="w-11 h-11 bg-error-container rounded-xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-error text-lg" style="font-variation-settings:'FILL' 1;">event_busy</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between gap-2">
+            <p class="font-bold text-sm text-on-surface">Tenggat PPh Pasal 21 — 3 Hari Lagi</p>
+            <div class="flex items-center gap-2 shrink-0">
+              <span class="w-2 h-2 bg-primary rounded-full"></span>
+              <span class="text-[10px] text-on-surface-variant">2 jam lalu</span>
+            </div>
+          </div>
+          <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Batas waktu pelaporan PPh Pasal 21 Masa September 2023 adalah 20 Oktober 2023. Segera laporkan untuk menghindari denda.</p>
+          <a href="pelaporanpajak-dekstop.html" class="inline-flex items-center gap-1 text-primary text-xs font-bold mt-2 hover:underline">
+            Lihat Detail <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Unread: Status Permohonan -->
+      <div class="notif-unread rounded-xl p-5 shadow-sm flex gap-4 cursor-pointer hover:bg-blue-50 transition-colors" role="listitem">
+        <div class="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-blue-600 text-lg" style="font-variation-settings:'FILL' 1;">assignment_turned_in</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between gap-2">
+            <p class="font-bold text-sm text-on-surface">Permohonan NIB Disetujui</p>
+            <div class="flex items-center gap-2 shrink-0">
+              <span class="w-2 h-2 bg-primary rounded-full"></span>
+              <span class="text-[10px] text-on-surface-variant">5 jam lalu</span>
+            </div>
+          </div>
+          <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Permohonan NIB untuk PT Mitra Madrasah Digital (#AKS-88219) telah disetujui dan dokumen siap diunduh.</p>
+          <a href="permohonansaya-dekstop.html" class="inline-flex items-center gap-1 text-primary text-xs font-bold mt-2 hover:underline">
+            Unduh Dokumen <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Unread: Billing -->
+      <div class="notif-unread rounded-xl p-5 shadow-sm flex gap-4 cursor-pointer hover:bg-blue-50 transition-colors" role="listitem">
+        <div class="w-11 h-11 bg-secondary-fixed rounded-xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings:'FILL' 1;">payments</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between gap-2">
+            <p class="font-bold text-sm text-on-surface">Tagihan Jatuh Tempo dalam 7 Hari</p>
+            <div class="flex items-center gap-2 shrink-0">
+              <span class="w-2 h-2 bg-primary rounded-full"></span>
+              <span class="text-[10px] text-on-surface-variant">Kemarin</span>
+            </div>
+          </div>
+          <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Tagihan langganan Akses Legal Pro sebesar Rp 12.500.000 akan jatuh tempo pada 14 Desember 2024.</p>
+          <a href="billing&harga-dekstop.html" class="inline-flex items-center gap-1 text-primary text-xs font-bold mt-2 hover:underline">
+            Bayar Sekarang <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Read: Konsultasi -->
+      <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-5 shadow-sm flex gap-4 cursor-pointer hover:bg-surface-container-low transition-colors opacity-70" role="listitem">
+        <div class="w-11 h-11 bg-primary-fixed rounded-xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[#003466] text-lg" style="font-variation-settings:'FILL' 1;">support_agent</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between gap-2">
+            <p class="font-bold text-sm text-on-surface">Siti Aminah Membalas Pesan Anda</p>
+            <span class="text-[10px] text-on-surface-variant shrink-0">2 hari lalu</span>
+          </div>
+          <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Siti Aminah, S.H., M.H. telah membalas konsultasi Anda mengenai revisi dokumen NIB.</p>
+          <a href="konsultasi-dekstop.html" class="inline-flex items-center gap-1 text-primary text-xs font-bold mt-2 hover:underline">
+            Buka Chat <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Read: Dokumen -->
+      <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-5 shadow-sm flex gap-4 cursor-pointer hover:bg-surface-container-low transition-colors opacity-70" role="listitem">
+        <div class="w-11 h-11 bg-tertiary-fixed rounded-xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings:'FILL' 1;">folder_open</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between gap-2">
+            <p class="font-bold text-sm text-on-surface">Dokumen NPWP Siap Diunduh</p>
+            <span class="text-[10px] text-on-surface-variant shrink-0">3 hari lalu</span>
+          </div>
+          <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Sertifikat NPWP untuk CV Kopi Raya telah diterbitkan dan tersedia di Brankas Dokumen Anda.</p>
+          <a href="brankasdokumen-dekstop.html" class="inline-flex items-center gap-1 text-primary text-xs font-bold mt-2 hover:underline">
+            Buka Brankas <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Read: Sistem -->
+      <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-5 shadow-sm flex gap-4 cursor-pointer hover:bg-surface-container-low transition-colors opacity-70" role="listitem">
+        <div class="w-11 h-11 bg-surface-container-high rounded-xl flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-on-surface-variant text-lg" style="font-variation-settings:'FILL' 1;">info</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between gap-2">
+            <p class="font-bold text-sm text-on-surface">Pembaruan Sistem — v2.4.1</p>
+            <span class="text-[10px] text-on-surface-variant shrink-0">1 minggu lalu</span>
+          </div>
+          <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Platform Akses Legal telah diperbarui dengan fitur baru: Stepper interaktif pada formulir klaim dan peningkatan performa.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+// Filter tabs
+document.querySelectorAll('.filter-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-tab').forEach(b => {
+      b.classList.remove('bg-[#003466]','text-white');
+      b.classList.add('bg-surface-container-high','text-on-surface-variant');
+      b.setAttribute('aria-selected','false');
+    });
+    btn.classList.remove('bg-surface-container-high','text-on-surface-variant');
+    btn.classList.add('bg-[#003466]','text-white');
+    btn.setAttribute('aria-selected','true');
+  });
+});
+
+// Mark all read
+document.getElementById('mark-all-read').addEventListener('click', () => {
+  document.querySelectorAll('.notif-unread').forEach(el => {
+    el.classList.remove('notif-unread');
+    el.classList.add('bg-surface-container-lowest','border','border-outline-variant/40','opacity-70');
+    el.querySelector('.w-2.h-2.bg-primary')?.remove();
+  });
+  document.querySelector('p.text-on-surface-variant.text-sm').textContent = '0 notifikasi belum dibaca';
+});
+</script>
+</body>
+</html>

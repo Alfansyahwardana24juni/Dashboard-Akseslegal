@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Detail Dokumen | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#00518c", "on-primary": "#ffffff",
+        "primary-container": "#2a6aa7", "on-primary-container": "#d9e8ff",
+        "primary-fixed": "#d2e4ff",
+        "secondary": "#7d5800", "secondary-container": "#ffbe3d",
+        "on-secondary-container": "#704e00",
+        "tertiary": "#295276", "tertiary-fixed": "#cfe5ff",
+        "surface": "#f8f9ff", "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3f9", "surface-container": "#ededf3",
+        "surface-container-high": "#e7e8ed", "surface-container-highest": "#e1e2e8",
+        "on-surface": "#191c20", "on-surface-variant": "#414750",
+        "outline": "#727781", "outline-variant": "#c1c7d1",
+        "background": "#f8f9ff", "error": "#ba1a1a", "error-container": "#ffdad6"
+      },
+      fontFamily: { "manrope": ["Manrope"], "inter": ["Inter"] }
+    }
+  }
+}
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+  .nav-active { border-right: 3px solid #003466; background-color: #ededf3; }
+</style>
+</head>
+<body class="bg-background font-inter text-on-surface">
+
+<!-- Sidebar -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest shadow-[2px_0_16px_rgba(0,0,0,0.06)] flex flex-col z-40" aria-label="Navigasi utama">
+  <div class="px-6 py-6 border-b border-outline-variant/30">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-[#003466] rounded-lg flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-lg" style="font-variation-settings:'FILL' 1;">balance</span>
+      </div>
+      <div>
+        <h1 class="text-base font-black text-[#003466] leading-tight font-manrope">Digital Jurist</h1>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-secondary">Akses Legal</p>
+      </div>
+    </div>
+  </div>
+  <nav class="flex-1 px-3 py-4 space-y-1" aria-label="Menu navigasi">
+    <a href="overview-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">dashboard</span>
+      <span class="text-sm font-manrope">Overview</span>
+    </a>
+    <a href="konsultasi-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">support_agent</span>
+      <span class="text-sm font-manrope">Konsultasi</span>
+    </a>
+    <a href="permohonansaya-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">assignment</span>
+      <span class="text-sm font-manrope">Permohonan Saya</span>
+    </a>
+    <a href="brankasdokumen-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-[#003466] font-bold rounded-xl nav-active transition-all" aria-current="page">
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">folder_open</span>
+      <span class="text-sm font-manrope">Dokumen Legal</span>
+    </a>
+    <a href="billing&harga-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">payments</span>
+      <span class="text-sm font-manrope">Billing &amp; Harga</span>
+    </a>
+    <a href="pelaporanpajak-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">receipt_long</span>
+      <span class="text-sm font-manrope">Pelaporan Pajak</span>
+    </a>
+  </nav>
+  <div class="px-3 pb-4 space-y-2">
+    <div class="px-3 py-3 bg-primary/5 rounded-xl border border-primary/10">
+      <p class="text-[10px] font-bold text-primary uppercase tracking-wider mb-2">Layanan Baru</p>
+      <a href="konsultasi-dekstop.html" class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#003466] text-white text-sm font-bold rounded-lg hover:bg-primary transition-all active:scale-95">
+        <span class="material-symbols-outlined text-sm">add</span>
+        Mulai Konsultasi
+      </a>
+    </div>
+    <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">help_outline</span>
+      <span class="font-manrope">Bantuan</span>
+    </a>
+    <a href="login.html" class="flex items-center gap-3 px-4 py-2.5 text-error hover:bg-error-container/20 rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">logout</span>
+      <span class="font-manrope">Keluar</span>
+    </a>
+  </div>
+</aside>
+
+<!-- Main -->
+<div class="ml-64 min-h-screen flex flex-col">
+  <!-- Top Bar -->
+  <header class="sticky top-0 z-30 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm" aria-label="Header aplikasi">
+    <div class="flex items-center justify-between px-8 h-16">
+      <div class="flex-1 max-w-md">
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+          <input type="text" placeholder="Cari dokumen..." aria-label="Cari dokumen"
+            class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-full text-sm border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+        </div>
+      </div>
+      <div class="flex items-center gap-4 pl-6">
+        <button class="relative p-2 rounded-full hover:bg-surface-container transition-colors" aria-label="Notifikasi" onclick="window.location.href='notifikasi-dekstop.html'">
+          <span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+        </button>
+        <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='profil-dekstop.html'">
+          <div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-sm">SA</div>
+          <div class="hidden lg:block">
+            <p class="text-sm font-bold text-on-surface leading-none">Super Admin</p>
+            <p class="text-[10px] text-on-surface-variant">Premium Member</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 p-8 max-w-[1200px] mx-auto w-full" aria-label="Konten utama">
+    <!-- Breadcrumb & Back -->
+    <div class="flex items-center justify-between mb-6">
+      <nav class="flex items-center gap-2 text-xs font-medium text-on-surface-variant/70" aria-label="Breadcrumb">
+        <a href="overview-dekstop.html" class="hover:text-primary transition-colors">Dashboard</a>
+        <span class="material-symbols-outlined text-sm">chevron_right</span>
+        <a href="brankasdokumen-dekstop.html" class="hover:text-primary transition-colors">Brankas Dokumen</a>
+        <span class="material-symbols-outlined text-sm">chevron_right</span>
+        <span class="text-primary font-bold">PT Teknologi Maju Nusantara</span>
+      </nav>
+      <a href="brankasdokumen-dekstop.html" class="flex items-center gap-1.5 text-primary text-sm font-bold hover:underline">
+        <span class="material-symbols-outlined text-base">arrow_back</span>
+        Kembali ke Brankas
+      </a>
+    </div>
+
+    <!-- Hero Company Card -->
+    <section class="relative rounded-2xl overflow-hidden mb-8 shadow-sm" aria-label="Informasi perusahaan">
+      <div class="bg-gradient-to-r from-[#003466] to-primary p-8 text-white">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/30">
+              <span class="material-symbols-outlined text-3xl text-white" style="font-variation-settings:'FILL' 1;">corporate_fare</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-black font-manrope mb-1">PT Teknologi Maju Nusantara</h2>
+              <p class="text-white/70 font-medium">Perseroan Terbatas</p>
+            </div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/20">
+            <p class="text-[10px] uppercase tracking-wider text-white/50 mb-1">Status</p>
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+              <span class="text-sm font-bold">SELESAI</span>
+            </div>
+          </div>
+        </div>
+        <!-- Info Grid -->
+        <div class="grid grid-cols-4 gap-4 bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/20">
+          <div>
+            <p class="text-[10px] uppercase font-bold text-white/50 mb-1">Jenis Badan Usaha</p>
+            <p class="font-bold text-sm">Perseroan Terbatas</p>
+          </div>
+          <div>
+            <p class="text-[10px] uppercase font-bold text-white/50 mb-1">Nomor Akta</p>
+            <p class="font-bold text-sm">No. 12/2021/Notaris</p>
+          </div>
+          <div>
+            <p class="text-[10px] uppercase font-bold text-white/50 mb-1">Nomor NIB</p>
+            <p class="font-bold text-sm">1234567890123</p>
+          </div>
+          <div>
+            <p class="text-[10px] uppercase font-bold text-white/50 mb-1">Tanggal Pendirian</p>
+            <p class="font-bold text-sm">12 Jan 2021</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dokumen Table -->
+    <section aria-label="Daftar dokumen legal">
+      <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-sm overflow-hidden">
+        <div class="px-6 py-5 border-b border-outline-variant/30 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">folder_managed</span>
+            <h3 class="text-lg font-bold text-on-surface font-manrope">Berkas Dokumen</h3>
+            <span class="text-xs text-on-surface-variant font-medium">4 dokumen ditemukan</span>
+          </div>
+          <div class="flex items-center bg-surface-container p-1 rounded-lg gap-1">
+            <button class="px-3 py-1.5 text-xs font-bold rounded-md bg-[#003466] text-white">Semua</button>
+            <button class="px-3 py-1.5 text-xs font-bold rounded-md text-on-surface-variant hover:text-primary transition-colors">Legalitas</button>
+            <button class="px-3 py-1.5 text-xs font-bold rounded-md text-on-surface-variant hover:text-primary transition-colors">Perpajakan</button>
+            <button class="px-3 py-1.5 text-xs font-bold rounded-md text-on-surface-variant hover:text-primary transition-colors">Perizinan</button>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left" role="table">
+            <thead>
+              <tr class="bg-surface-container-low border-b border-outline-variant/30">
+                <th class="px-6 py-3 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant w-12">No</th>
+                <th class="px-6 py-3 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Jenis Dokumen</th>
+                <th class="px-6 py-3 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Status</th>
+                <th class="px-6 py-3 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">No Dokumen</th>
+                <th class="px-6 py-3 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Tanggal</th>
+                <th class="px-6 py-3 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant text-center">Aksi</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-outline-variant/20">
+              <!-- Akta Pendirian -->
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="px-6 py-4 text-sm font-medium text-on-surface-variant">1</td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <span class="material-symbols-outlined text-primary text-base">description</span>
+                    </div>
+                    <div>
+                      <p class="text-sm font-bold text-on-surface">Akta Pendirian</p>
+                      <p class="text-[10px] text-on-surface-variant">Legalitas</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="px-2.5 py-1 rounded-full bg-green-100 text-green-700 text-[10px] font-bold">VALID</span>
+                </td>
+                <td class="px-6 py-4 text-sm text-on-surface-variant font-medium">12.2024.1234.AK</td>
+                <td class="px-6 py-4 text-sm text-on-surface-variant">12 Jan 2024</td>
+                <td class="px-6 py-4 text-center">
+                  <button class="p-2 text-primary hover:bg-primary/5 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center mx-auto" aria-label="Unduh Akta Pendirian">
+                    <span class="material-symbols-outlined text-lg">download</span>
+                  </button>
+                </td>
+              </tr>
+              <!-- SK Menteri -->
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="px-6 py-4 text-sm font-medium text-on-surface-variant">2</td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <span class="material-symbols-outlined text-primary text-base">verified_user</span>
+                    </div>
+                    <div>
+                      <p class="text-sm font-bold text-on-surface">SK Menteri Kehakiman</p>
+                      <p class="text-[10px] text-on-surface-variant">Legalitas</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="px-2.5 py-1 rounded-full bg-green-100 text-green-700 text-[10px] font-bold">VALID</span>
+                </td>
+                <td class="px-6 py-4 text-sm text-on-surface-variant font-medium">AHU-001234.AH.01.01</td>
+                <td class="px-6 py-4 text-sm text-on-surface-variant">15 Feb 2024</td>
+                <td class="px-6 py-4 text-center">
+                  <button class="p-2 text-primary hover:bg-primary/5 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center mx-auto" aria-label="Unduh SK Menteri">
+                    <span class="material-symbols-outlined text-lg">download</span>
+                  </button>
+                </td>
+              </tr>
+              <!-- NPWP -->
+              <tr class="hover:bg-surface-container-low transition-colors bg-error-container/10">
+                <td class="px-6 py-4 text-sm font-medium text-on-surface-variant">3</td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center">
+                      <span class="material-symbols-outlined text-error text-base">report</span>
+                    </div>
+                    <div>
+                      <p class="text-sm font-bold text-on-surface">Sertifikat NPWP</p>
+                      <p class="text-[10px] text-on-surface-variant">Perpajakan</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="px-2.5 py-1 rounded-full bg-red-100 text-red-700 text-[10px] font-bold">EXPIRED</span>
+                </td>
+                <td class="px-6 py-4 text-sm text-on-surface-variant font-medium">01.234.567.8.901.000</td>
+                <td class="px-6 py-4 text-sm text-on-surface-variant">01 Mar 2024</td>
+                <td class="px-6 py-4 text-center">
+                  <button class="p-2 text-primary hover:bg-primary/5 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center mx-auto" aria-label="Unduh NPWP">
+                    <span class="material-symbols-outlined text-lg">download</span>
+                  </button>
+                </td>
+              </tr>
+              <!-- NIB -->
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="px-6 py-4 text-sm font-medium text-on-surface-variant">4</td>
+                <td class="px-6 py-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center">
+                      <span class="material-symbols-outlined text-amber-600 text-base">badge</span>
+                    </div>
+                    <div>
+                      <p class="text-sm font-bold text-on-surface">NIB (OSS RBA)</p>
+                      <p class="text-[10px] text-on-surface-variant">Perizinan</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-700 text-[10px] font-bold">REVIEW</span>
+                </td>
+                <td class="px-6 py-4 text-sm text-on-surface-variant font-medium">1234567890123</td>
+                <td class="px-6 py-4 text-sm text-on-surface-variant">20 Mei 2026</td>
+                <td class="px-6 py-4 text-center">
+                  <button class="p-2 text-primary hover:bg-primary/5 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center mx-auto" aria-label="Unduh NIB">
+                    <span class="material-symbols-outlined text-lg">download</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Pagination -->
+        <div class="px-6 py-4 border-t border-outline-variant/30 flex items-center justify-between bg-surface-container-low">
+          <p class="text-xs text-on-surface-variant font-medium">Menampilkan <strong>1-4</strong> dari <strong>4</strong> dokumen</p>
+          <div class="flex items-center gap-1">
+            <button class="w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors disabled:opacity-30" disabled aria-label="Halaman sebelumnya">
+              <span class="material-symbols-outlined text-base">chevron_left</span>
+            </button>
+            <button class="w-9 h-9 flex items-center justify-center rounded-lg bg-[#003466] text-white text-xs font-bold" aria-current="page">1</button>
+            <button class="w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" aria-label="Halaman berikutnya">
+              <span class="material-symbols-outlined text-base">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help Card -->
+    <div class="mt-8 bg-[#003466] rounded-xl p-6 text-white flex items-center justify-between shadow-sm">
+      <div>
+        <h3 class="font-bold text-base font-manrope mb-1">Butuh Bantuan Hukum?</h3>
+        <p class="text-white/70 text-sm">Tim legal kami siap membantu Anda 24/7 terkait dokumen ini.</p>
+      </div>
+      <a href="konsultasi-dekstop.html" class="flex items-center gap-2 bg-secondary-container text-on-secondary-container px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-secondary-fixed transition-all active:scale-95 shrink-0">
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">chat</span>
+        Chat dengan Tim
+      </a>
+    </div>
+  </main>
+</div>
+
+<script>
+document.querySelectorAll('button[aria-label^="Unduh"]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.innerHTML = '<span class="material-symbols-outlined text-lg text-green-600">check_circle</span>';
+    setTimeout(() => { btn.innerHTML = '<span class="material-symbols-outlined text-lg">download</span>'; }, 2000);
+  });
+});
+</script>
+</body>
+</html>

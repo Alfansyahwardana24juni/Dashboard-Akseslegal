@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Profil | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config={darkMode:"class",theme:{extend:{colors:{
+  "primary":"#00518c","on-primary":"#ffffff","primary-container":"#2a6aa7",
+  "primary-fixed":"#d2e4ff","secondary":"#7d5800","secondary-container":"#ffbe3d",
+  "on-secondary-container":"#704e00","secondary-fixed":"#ffdea9",
+  "tertiary":"#295276","tertiary-fixed":"#cfe5ff",
+  "surface":"#f8f9ff","surface-container-lowest":"#ffffff","surface-container-low":"#f2f3f9",
+  "surface-container":"#ededf3","surface-container-high":"#e7e8ed","surface-container-highest":"#e1e2e8",
+  "on-surface":"#191c20","on-surface-variant":"#414750","outline":"#727781",
+  "outline-variant":"#c1c7d1","background":"#f8f9ff","error":"#ba1a1a","error-container":"#ffdad6"
+}}}}
+</script>
+<style>
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+  body{min-height:max(844px,100dvh);}
+</style>
+</head>
+<body class="bg-background text-on-surface font-inter pb-28">
+
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm" aria-label="Header">
+  <div class="flex items-center justify-between px-4 h-14">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-[#003466] rounded-lg flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-base" style="font-variation-settings:'FILL' 1;">balance</span>
+      </div>
+      <h1 class="text-sm font-black text-[#003466] font-manrope">Akses Legal Indonesia</h1>
+    </div>
+    <button class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container" aria-label="Notifikasi" onclick="window.location.href='notifikasi-mobile.html'">
+      <span class="material-symbols-outlined text-primary">notifications</span>
+      <span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+    </button>
+  </div>
+</header>
+
+<main class="pt-16 px-4 space-y-4" aria-label="Profil Saya">
+
+  <!-- Profile Hero -->
+  <section class="mt-4 bg-gradient-to-br from-[#003466] to-primary rounded-xl p-6 text-white shadow-md" aria-label="Informasi profil">
+    <div class="flex items-center gap-4">
+      <div class="relative">
+        <div class="w-16 h-16 rounded-full bg-white/20 border-2 border-white/40 flex items-center justify-center text-white text-2xl font-black">BD</div>
+        <button class="absolute -bottom-1 -right-1 w-7 h-7 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center shadow-md" aria-label="Ganti foto">
+          <span class="material-symbols-outlined text-xs">edit</span>
+        </button>
+      </div>
+      <div class="flex-1">
+        <h2 class="text-lg font-black font-manrope leading-tight">Budi Darmawan</h2>
+        <p class="text-white/70 text-xs">Direktur Utama</p>
+        <div class="mt-1.5 inline-flex items-center gap-1 px-2.5 py-0.5 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold">
+          <span class="material-symbols-outlined text-xs" style="font-variation-settings:'FILL' 1;">workspace_premium</span>
+          Akses Legal Pro
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-3 gap-3 mt-5 pt-4 border-t border-white/20">
+      <div class="text-center">
+        <p class="text-xl font-black">6</p>
+        <p class="text-[10px] text-white/60">Permohonan</p>
+      </div>
+      <div class="text-center">
+        <p class="text-xl font-black">24</p>
+        <p class="text-[10px] text-white/60">Dokumen</p>
+      </div>
+      <div class="text-center">
+        <p class="text-xl font-black">85%</p>
+        <p class="text-[10px] text-white/60">Kepatuhan</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Pribadi -->
+  <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-sm overflow-hidden" aria-label="Informasi pribadi">
+    <div class="px-4 py-3 border-b border-outline-variant/20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary text-lg">person</span>
+        <h3 class="text-sm font-bold text-[#003466] font-manrope">Informasi Pribadi</h3>
+      </div>
+      <button class="text-primary text-xs font-bold min-h-[44px] px-2">Edit</button>
+    </div>
+    <div class="divide-y divide-outline-variant/20">
+      <div class="px-4 py-3 flex justify-between items-center">
+        <span class="text-xs text-on-surface-variant">Nama Lengkap</span>
+        <span class="text-sm font-bold text-on-surface">Budi Darmawan</span>
+      </div>
+      <div class="px-4 py-3 flex justify-between items-center">
+        <span class="text-xs text-on-surface-variant">Email</span>
+        <span class="text-sm font-bold text-on-surface truncate ml-4">budi@perusahaan.com</span>
+      </div>
+      <div class="px-4 py-3 flex justify-between items-center">
+        <span class="text-xs text-on-surface-variant">Nomor HP</span>
+        <span class="text-sm font-bold text-on-surface">+62 812-3456-7890</span>
+      </div>
+      <div class="px-4 py-3 flex justify-between items-center">
+        <span class="text-xs text-on-surface-variant">Jabatan</span>
+        <span class="text-sm font-bold text-on-surface">Direktur Utama</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Perusahaan -->
+  <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-sm overflow-hidden" aria-label="Informasi perusahaan">
+    <div class="px-4 py-3 border-b border-outline-variant/20 flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary text-lg">corporate_fare</span>
+      <h3 class="text-sm font-bold text-[#003466] font-manrope">Informasi Perusahaan</h3>
+    </div>
+    <div class="divide-y divide-outline-variant/20">
+      <div class="px-4 py-3 flex justify-between items-center">
+        <span class="text-xs text-on-surface-variant">Nama Perusahaan</span>
+        <span class="text-sm font-bold text-on-surface">PT Adijaya Sentosa</span>
+      </div>
+      <div class="px-4 py-3 flex justify-between items-center">
+        <span class="text-xs text-on-surface-variant">NIB</span>
+        <span class="text-sm font-bold text-on-surface">1234567890123</span>
+      </div>
+      <div class="px-4 py-3 flex justify-between items-center">
+        <span class="text-xs text-on-surface-variant">NPWP Badan</span>
+        <span class="text-sm font-bold text-on-surface">01.234.567.8-901</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Lainnya -->
+  <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-sm overflow-hidden" aria-label="Menu pengaturan">
+    <a href="billing&harga-mobile.html" class="flex items-center gap-3 px-4 py-4 hover:bg-surface-container-low transition-colors border-b border-outline-variant/20 min-h-[56px]">
+      <span class="material-symbols-outlined text-primary">payments</span>
+      <span class="text-sm font-medium text-on-surface flex-1">Billing &amp; Langganan</span>
+      <span class="material-symbols-outlined text-on-surface-variant text-base">chevron_right</span>
+    </a>
+    <a href="notifikasi-mobile.html" class="flex items-center gap-3 px-4 py-4 hover:bg-surface-container-low transition-colors border-b border-outline-variant/20 min-h-[56px]">
+      <span class="material-symbols-outlined text-primary">notifications</span>
+      <span class="text-sm font-medium text-on-surface flex-1">Notifikasi</span>
+      <span class="w-5 h-5 bg-error text-white text-[10px] font-bold rounded-full flex items-center justify-center">3</span>
+    </a>
+    <a href="#" class="flex items-center gap-3 px-4 py-4 hover:bg-surface-container-low transition-colors border-b border-outline-variant/20 min-h-[56px]">
+      <span class="material-symbols-outlined text-primary">security</span>
+      <span class="text-sm font-medium text-on-surface flex-1">Keamanan Akun</span>
+      <span class="material-symbols-outlined text-on-surface-variant text-base">chevron_right</span>
+    </a>
+    <a href="#" class="flex items-center gap-3 px-4 py-4 hover:bg-surface-container-low transition-colors border-b border-outline-variant/20 min-h-[56px]">
+      <span class="material-symbols-outlined text-primary">help_outline</span>
+      <span class="text-sm font-medium text-on-surface flex-1">Bantuan &amp; FAQ</span>
+      <span class="material-symbols-outlined text-on-surface-variant text-base">chevron_right</span>
+    </a>
+    <a href="login.html" class="flex items-center gap-3 px-4 py-4 hover:bg-error-container/20 transition-colors min-h-[56px]">
+      <span class="material-symbols-outlined text-error">logout</span>
+      <span class="text-sm font-medium text-error">Keluar dari Akun</span>
+    </a>
+  </section>
+
+  <!-- App Version -->
+  <p class="text-center text-[10px] text-on-surface-variant pb-2">Akses Legal Indonesia v2.4.1 • © 2024</p>
+
+</main>
+
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest border-t border-outline-variant/30 shadow-lg" aria-label="Navigasi bawah">
+  <div class="flex justify-around items-center h-16 px-2">
+    <a href="overview-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Beranda">
+      <span class="material-symbols-outlined text-xl">dashboard</span>
+      <span class="text-[10px] font-medium">Beranda</span>
+    </a>
+    <a href="permohonansaya-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Layanan">
+      <span class="material-symbols-outlined text-xl">gavel</span>
+      <span class="text-[10px] font-medium">Layanan</span>
+    </a>
+    <a href="brankasdokumen-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Dokumen">
+      <span class="material-symbols-outlined text-xl">folder_open</span>
+      <span class="text-[10px] font-medium">Dokumen</span>
+    </a>
+    <a href="profil-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full min-w-[44px] min-h-[44px]" aria-current="page" aria-label="Profil">
+      <span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">person</span>
+      <span class="text-[10px] font-bold">Profil</span>
+    </a>
+  </div>
+</nav>
+
+</body>
+</html>

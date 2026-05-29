@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Profil Saya | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode:"class",
+  theme:{extend:{colors:{
+    "primary":"#00518c","on-primary":"#ffffff","primary-container":"#2a6aa7",
+    "on-primary-container":"#d9e8ff","primary-fixed":"#d2e4ff",
+    "secondary":"#7d5800","secondary-container":"#ffbe3d","on-secondary-container":"#704e00",
+    "secondary-fixed":"#ffdea9","tertiary":"#295276","tertiary-fixed":"#cfe5ff",
+    "surface":"#f8f9ff","surface-container-lowest":"#ffffff","surface-container-low":"#f2f3f9",
+    "surface-container":"#ededf3","surface-container-high":"#e7e8ed","surface-container-highest":"#e1e2e8",
+    "on-surface":"#191c20","on-surface-variant":"#414750","outline":"#727781",
+    "outline-variant":"#c1c7d1","background":"#f8f9ff","error":"#ba1a1a","error-container":"#ffdad6"
+  },fontFamily:{"manrope":["Manrope"],"inter":["Inter"]}}}
+}
+</script>
+<style>
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle;}
+  .nav-active{border-right:3px solid #003466;background-color:#ededf3;}
+</style>
+</head>
+<body class="bg-background font-inter text-on-surface">
+
+<!-- Sidebar -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest shadow-[2px_0_16px_rgba(0,0,0,0.06)] flex flex-col z-40" aria-label="Navigasi utama">
+  <div class="px-6 py-6 border-b border-outline-variant/30">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-[#003466] rounded-lg flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-lg" style="font-variation-settings:'FILL' 1;">balance</span>
+      </div>
+      <div>
+        <h1 class="text-base font-black text-[#003466] leading-tight font-manrope">Digital Jurist</h1>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-secondary">Akses Legal</p>
+      </div>
+    </div>
+  </div>
+  <nav class="flex-1 px-3 py-4 space-y-1" aria-label="Menu navigasi">
+    <a href="overview-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">dashboard</span><span class="text-sm font-manrope">Overview</span>
+    </a>
+    <a href="konsultasi-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">support_agent</span><span class="text-sm font-manrope">Konsultasi</span>
+    </a>
+    <a href="permohonansaya-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">assignment</span><span class="text-sm font-manrope">Permohonan Saya</span>
+    </a>
+    <a href="brankasdokumen-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">folder_open</span><span class="text-sm font-manrope">Dokumen Legal</span>
+    </a>
+    <a href="billing&harga-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">payments</span><span class="text-sm font-manrope">Billing &amp; Harga</span>
+    </a>
+    <a href="pelaporanpajak-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">receipt_long</span><span class="text-sm font-manrope">Pelaporan Pajak</span>
+    </a>
+  </nav>
+  <div class="px-3 pb-4 space-y-2">
+    <div class="px-3 py-3 bg-primary/5 rounded-xl border border-primary/10">
+      <p class="text-[10px] font-bold text-primary uppercase tracking-wider mb-2">Layanan Baru</p>
+      <a href="konsultasi-dekstop.html" class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#003466] text-white text-sm font-bold rounded-lg hover:bg-primary transition-all active:scale-95">
+        <span class="material-symbols-outlined text-sm">add</span>Mulai Konsultasi
+      </a>
+    </div>
+    <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">help_outline</span><span class="font-manrope">Bantuan</span>
+    </a>
+    <a href="login.html" class="flex items-center gap-3 px-4 py-2.5 text-error hover:bg-error-container/20 rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">logout</span><span class="font-manrope">Keluar</span>
+    </a>
+  </div>
+</aside>
+
+<!-- Main -->
+<div class="ml-64 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-30 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm" aria-label="Header aplikasi">
+    <div class="flex items-center justify-between px-8 h-16">
+      <div class="flex-1 max-w-md">
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+          <input type="text" placeholder="Cari layanan..." aria-label="Cari layanan" class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-full text-sm border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+        </div>
+      </div>
+      <div class="flex items-center gap-4 pl-6">
+        <button class="relative p-2 rounded-full hover:bg-surface-container transition-colors" aria-label="Notifikasi" onclick="window.location.href='notifikasi-dekstop.html'">
+          <span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+        </button>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-sm">BD</div>
+          <div class="hidden lg:block">
+            <p class="text-sm font-bold text-on-surface leading-none">Budi Darmawan</p>
+            <p class="text-[10px] text-on-surface-variant">Direktur Utama</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 p-8 max-w-[1200px] mx-auto w-full" aria-label="Profil Saya">
+    <section class="mb-8">
+      <h2 class="text-3xl font-black text-[#003466] font-manrope mb-1">Profil Saya</h2>
+      <p class="text-on-surface-variant text-sm">Kelola informasi akun dan pengaturan keamanan Anda.</p>
+    </section>
+
+    <div class="grid grid-cols-12 gap-6">
+      <!-- Left: Profile Card -->
+      <div class="col-span-12 lg:col-span-4 space-y-5">
+        <!-- Avatar Card -->
+        <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 shadow-sm text-center">
+          <div class="relative inline-block mb-4">
+            <div class="w-24 h-24 rounded-full bg-primary-container flex items-center justify-center text-white text-3xl font-black mx-auto">BD</div>
+            <button class="absolute bottom-0 right-0 w-8 h-8 bg-[#003466] text-white rounded-full flex items-center justify-center hover:bg-primary transition-colors shadow-md" aria-label="Ganti foto profil">
+              <span class="material-symbols-outlined text-sm">edit</span>
+            </button>
+          </div>
+          <h3 class="text-lg font-black text-[#003466] font-manrope">Budi Darmawan</h3>
+          <p class="text-sm text-on-surface-variant">Direktur Utama</p>
+          <div class="mt-3 inline-flex items-center gap-1.5 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">workspace_premium</span>
+            Akses Legal Pro
+          </div>
+          <div class="mt-4 pt-4 border-t border-outline-variant/30 grid grid-cols-3 gap-2 text-center">
+            <div><p class="text-lg font-black text-[#003466]">6</p><p class="text-[10px] text-on-surface-variant">Permohonan</p></div>
+            <div><p class="text-lg font-black text-[#003466]">24</p><p class="text-[10px] text-on-surface-variant">Dokumen</p></div>
+            <div><p class="text-lg font-black text-[#003466]">85%</p><p class="text-[10px] text-on-surface-variant">Kepatuhan</p></div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-sm overflow-hidden">
+          <a href="billing&harga-dekstop.html" class="flex items-center gap-3 px-5 py-4 hover:bg-surface-container-low transition-colors border-b border-outline-variant/20">
+            <span class="material-symbols-outlined text-primary">payments</span>
+            <span class="text-sm font-medium text-on-surface">Billing &amp; Langganan</span>
+            <span class="material-symbols-outlined text-on-surface-variant text-base ml-auto">chevron_right</span>
+          </a>
+          <a href="notifikasi-dekstop.html" class="flex items-center gap-3 px-5 py-4 hover:bg-surface-container-low transition-colors border-b border-outline-variant/20">
+            <span class="material-symbols-outlined text-primary">notifications</span>
+            <span class="text-sm font-medium text-on-surface">Notifikasi</span>
+            <span class="w-5 h-5 bg-error text-white text-[10px] font-bold rounded-full flex items-center justify-center ml-auto">3</span>
+          </a>
+          <a href="#" class="flex items-center gap-3 px-5 py-4 hover:bg-surface-container-low transition-colors border-b border-outline-variant/20">
+            <span class="material-symbols-outlined text-primary">security</span>
+            <span class="text-sm font-medium text-on-surface">Keamanan Akun</span>
+            <span class="material-symbols-outlined text-on-surface-variant text-base ml-auto">chevron_right</span>
+          </a>
+          <a href="login.html" class="flex items-center gap-3 px-5 py-4 hover:bg-error-container/20 transition-colors text-error">
+            <span class="material-symbols-outlined">logout</span>
+            <span class="text-sm font-medium">Keluar dari Akun</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Edit Form -->
+      <div class="col-span-12 lg:col-span-8 space-y-5">
+        <!-- Personal Info -->
+        <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 shadow-sm" aria-label="Informasi Pribadi">
+          <div class="flex items-center justify-between mb-5">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center">
+                <span class="material-symbols-outlined text-[#003466]">person</span>
+              </div>
+              <h3 class="text-base font-bold text-[#003466] font-manrope">Informasi Pribadi</h3>
+            </div>
+            <button id="edit-personal-btn" class="flex items-center gap-1.5 text-primary text-sm font-bold hover:underline min-h-[44px] px-2">
+              <span class="material-symbols-outlined text-base">edit</span>Edit
+            </button>
+          </div>
+          <div class="grid grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5">Nama Lengkap</label>
+              <input type="text" value="Budi Darmawan" id="nama-lengkap" readonly
+                class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 outline-none read-only:bg-surface-container-low read-only:text-on-surface-variant transition-all">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5">Jabatan</label>
+              <input type="text" value="Direktur Utama" id="jabatan" readonly
+                class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 outline-none read-only:bg-surface-container-low read-only:text-on-surface-variant transition-all">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5">Email</label>
+              <input type="email" value="budi.darmawan@perusahaan.com" id="email-profil" readonly
+                class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 outline-none read-only:bg-surface-container-low read-only:text-on-surface-variant transition-all">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5">Nomor HP</label>
+              <input type="tel" value="+62 812-3456-7890" id="phone-profil" readonly
+                class="w-full bg-surface-container-high rounded-lg px-4 py-3 text-sm border border-outline-variant/40 outline-none read-only:bg-surface-container-low read-only:text-on-surface-variant transition-all">
+            </div>
+          </div>
+          <div id="personal-actions" class="hidden mt-4 flex gap-3 justify-end">
+            <button onclick="cancelEdit('personal')" class="px-5 py-2.5 border border-outline-variant text-on-surface rounded-lg text-sm font-bold hover:bg-surface-container transition-all min-h-[44px]">Batal</button>
+            <button onclick="saveEdit('personal')" class="px-5 py-2.5 bg-[#003466] text-white rounded-lg text-sm font-bold hover:bg-primary transition-all min-h-[44px]">Simpan Perubahan</button>
+          </div>
+        </section>
+
+        <!-- Company Info -->
+        <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 shadow-sm" aria-label="Informasi Perusahaan">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#003466]">corporate_fare</span>
+            </div>
+            <h3 class="text-base font-bold text-[#003466] font-manrope">Informasi Perusahaan</h3>
+          </div>
+          <div class="grid grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5">Nama Perusahaan</label>
+              <input type="text" value="PT Adijaya Sentosa" readonly class="w-full bg-surface-container-low rounded-lg px-4 py-3 text-sm border border-outline-variant/40 outline-none text-on-surface-variant">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5">Jenis Badan Usaha</label>
+              <input type="text" value="Perseroan Terbatas (PT)" readonly class="w-full bg-surface-container-low rounded-lg px-4 py-3 text-sm border border-outline-variant/40 outline-none text-on-surface-variant">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5">NIB</label>
+              <input type="text" value="1234567890123" readonly class="w-full bg-surface-container-low rounded-lg px-4 py-3 text-sm border border-outline-variant/40 outline-none text-on-surface-variant">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1.5">NPWP Badan</label>
+              <input type="text" value="01.234.567.8-901.000" readonly class="w-full bg-surface-container-low rounded-lg px-4 py-3 text-sm border border-outline-variant/40 outline-none text-on-surface-variant">
+            </div>
+          </div>
+        </section>
+
+        <!-- Security -->
+        <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 shadow-sm" aria-label="Keamanan Akun">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#003466]">security</span>
+            </div>
+            <h3 class="text-base font-bold text-[#003466] font-manrope">Keamanan Akun</h3>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">lock</span>
+                <div>
+                  <p class="text-sm font-bold text-on-surface">Password</p>
+                  <p class="text-xs text-on-surface-variant">Terakhir diubah 3 bulan lalu</p>
+                </div>
+              </div>
+              <button class="text-primary text-sm font-bold hover:underline min-h-[44px] px-2">Ubah</button>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">smartphone</span>
+                <div>
+                  <p class="text-sm font-bold text-on-surface">Autentikasi 2 Faktor</p>
+                  <p class="text-xs text-on-surface-variant">Aktif via SMS ke +62 812-xxx-7890</p>
+                </div>
+              </div>
+              <span class="px-2.5 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-full">Aktif</span>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">devices</span>
+                <div>
+                  <p class="text-sm font-bold text-on-surface">Sesi Aktif</p>
+                  <p class="text-xs text-on-surface-variant">2 perangkat aktif saat ini</p>
+                </div>
+              </div>
+              <button class="text-primary text-sm font-bold hover:underline min-h-[44px] px-2">Kelola</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Notification Preferences -->
+        <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-6 shadow-sm" aria-label="Preferensi Notifikasi">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#003466]">notifications</span>
+            </div>
+            <h3 class="text-base font-bold text-[#003466] font-manrope">Preferensi Notifikasi</h3>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between py-3 border-b border-outline-variant/20">
+              <div>
+                <p class="text-sm font-bold text-on-surface">Tenggat Pajak</p>
+                <p class="text-xs text-on-surface-variant">Pengingat H-7 dan H-1 sebelum jatuh tempo</p>
+              </div>
+              <button role="switch" aria-checked="true" class="w-11 h-6 bg-[#003466] rounded-full relative focus:ring-2 focus:ring-primary/20 outline-none toggle-switch" aria-label="Toggle notifikasi tenggat pajak">
+                <span class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full transition-all"></span>
+              </button>
+            </div>
+            <div class="flex items-center justify-between py-3 border-b border-outline-variant/20">
+              <div>
+                <p class="text-sm font-bold text-on-surface">Update Status Permohonan</p>
+                <p class="text-xs text-on-surface-variant">Notifikasi saat status pengajuan berubah</p>
+              </div>
+              <button role="switch" aria-checked="true" class="w-11 h-6 bg-[#003466] rounded-full relative focus:ring-2 focus:ring-primary/20 outline-none toggle-switch" aria-label="Toggle notifikasi status permohonan">
+                <span class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full transition-all"></span>
+              </button>
+            </div>
+            <div class="flex items-center justify-between py-3">
+              <div>
+                <p class="text-sm font-bold text-on-surface">Promo &amp; Penawaran</p>
+                <p class="text-xs text-on-surface-variant">Informasi paket dan layanan terbaru</p>
+              </div>
+              <button role="switch" aria-checked="false" class="w-11 h-6 bg-surface-container-high rounded-full relative focus:ring-2 focus:ring-primary/20 outline-none toggle-switch" aria-label="Toggle notifikasi promo">
+                <span class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-all"></span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+// Edit personal info toggle
+let editingPersonal = false;
+document.getElementById('edit-personal-btn').addEventListener('click', () => {
+  editingPersonal = true;
+  ['nama-lengkap','jabatan','email-profil','phone-profil'].forEach(id => {
+    const el = document.getElementById(id);
+    el.removeAttribute('readonly');
+    el.classList.remove('read-only:bg-surface-container-low','read-only:text-on-surface-variant');
+    el.classList.add('bg-surface-container-high','focus:ring-2','focus:ring-primary/20','focus:border-primary');
+  });
+  document.getElementById('personal-actions').classList.remove('hidden');
+  document.getElementById('personal-actions').classList.add('flex');
+});
+
+function cancelEdit(section) {
+  if (section === 'personal') {
+    ['nama-lengkap','jabatan','email-profil','phone-profil'].forEach(id => {
+      const el = document.getElementById(id);
+      el.setAttribute('readonly','');
+    });
+    document.getElementById('personal-actions').classList.add('hidden');
+    document.getElementById('personal-actions').classList.remove('flex');
+  }
+}
+
+function saveEdit(section) {
+  cancelEdit(section);
+  // Show success toast
+  const toast = document.createElement('div');
+  toast.className = 'fixed bottom-6 right-6 bg-[#003466] text-white px-5 py-3 rounded-xl shadow-xl flex items-center gap-2 z-50 text-sm font-bold';
+  toast.innerHTML = '<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings:\'FILL\' 1;">check_circle</span> Perubahan berhasil disimpan';
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 3000);
+}
+
+// Toggle switches
+document.querySelectorAll('.toggle-switch').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const isOn = btn.getAttribute('aria-checked') === 'true';
+    btn.setAttribute('aria-checked', (!isOn).toString());
+    btn.classList.toggle('bg-[#003466]', !isOn);
+    btn.classList.toggle('bg-surface-container-high', isOn);
+    const knob = btn.querySelector('span');
+    knob.classList.toggle('right-1', !isOn);
+    knob.classList.toggle('left-1', isOn);
+  });
+});
+</script>
+</body>
+</html>

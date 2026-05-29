@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Billing & Harga | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config={darkMode:"class",theme:{extend:{colors:{
+  "primary":"#00518c","on-primary":"#ffffff","primary-container":"#2a6aa7","primary-fixed":"#d2e4ff",
+  "secondary":"#7d5800","secondary-container":"#ffbe3d","on-secondary-container":"#704e00","secondary-fixed":"#ffdea9",
+  "tertiary":"#295276","tertiary-container":"#436a8f","tertiary-fixed":"#cfe5ff",
+  "surface":"#f8f9ff","surface-container-lowest":"#ffffff","surface-container-low":"#f2f3f9",
+  "surface-container":"#ededf3","surface-container-high":"#e7e8ed","surface-container-highest":"#e1e2e8",
+  "on-surface":"#191c20","on-surface-variant":"#414750","outline":"#727781",
+  "outline-variant":"#c1c7d1","background":"#f8f9ff","error":"#ba1a1a","error-container":"#ffdad6"
+}}}}
+</script>
+<style>
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+  body{min-height:max(844px,100dvh);-webkit-tap-highlight-color:transparent;}
+</style>
+</head>
+<body class="bg-background text-on-surface font-inter pb-28">
+
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm" aria-label="Header aplikasi">
+  <div class="flex items-center justify-between px-4 h-14">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center">
+        <span class="text-white font-bold text-xs">BS</span>
+      </div>
+      <h1 class="text-sm font-black text-[#003466] font-manrope">Akses Legal Indonesia</h1>
+    </div>
+    <button class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container" aria-label="Notifikasi" onclick="window.location.href='notifikasi-mobile.html'">
+      <span class="material-symbols-outlined text-primary">notifications</span>
+      <span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+    </button>
+  </div>
+</header>
+
+<main class="pt-16 px-4 space-y-4" aria-label="Billing dan Harga">
+  <section class="mt-4">
+    <h2 class="text-xl font-black text-[#003466] font-manrope">Billing &amp; Harga</h2>
+    <p class="text-sm text-on-surface-variant mt-1">Kelola paket langganan dan riwayat pembayaran Anda.</p>
+  </section>
+
+  <!-- Active Plan Card -->
+  <section class="relative overflow-hidden rounded-xl bg-tertiary-container text-white p-5 shadow-md" aria-label="Paket aktif">
+    <div class="absolute top-0 right-0 w-28 h-28 bg-white/10 rounded-full -mr-14 -mt-14 blur-2xl"></div>
+    <div class="relative z-10">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span class="bg-secondary-container text-on-secondary-container px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase mb-2 inline-block">Aktif</span>
+          <h3 class="text-xl font-black font-manrope">Akses Legal Pro</h3>
+          <p class="text-white/70 text-xs mt-0.5">Berakhir pada 14 Desember 2024</p>
+        </div>
+        <div class="text-right">
+          <p class="text-[10px] uppercase tracking-wider text-white/60">Per Tahun</p>
+          <p class="text-lg font-black font-manrope">Rp 12,5 Jt</p>
+        </div>
+      </div>
+      <!-- Features -->
+      <ul class="space-y-1.5 mb-4 text-xs text-white/80">
+        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings:'FILL' 1;">check_circle</span>Review Kontrak Tanpa Batas</li>
+        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings:'FILL' 1;">check_circle</span>Konsultasi Hukum 1-on-1</li>
+        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings:'FILL' 1;">check_circle</span>Akses Database Dokumen Premium</li>
+      </ul>
+      <div class="flex gap-3 pt-4 border-t border-white/20">
+        <button class="flex-1 bg-surface-container-lowest text-primary py-2.5 rounded-lg font-bold text-sm hover:bg-white transition-colors active:scale-95 min-h-[44px]">Ganti Paket</button>
+        <button class="px-4 py-2.5 border border-white/30 rounded-lg hover:bg-white/10 transition-colors min-h-[44px]" aria-label="Opsi lainnya">
+          <span class="material-symbols-outlined text-white">more_horiz</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Payment -->
+  <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm" aria-label="Tagihan berikutnya">
+    <div class="flex items-center gap-2 mb-3">
+      <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1;">receipt</span>
+      <h3 class="text-sm font-bold text-[#003466] font-manrope">Tagihan Berikutnya</h3>
+    </div>
+    <div class="flex items-center justify-between mb-3">
+      <div>
+        <p class="text-2xl font-black text-[#003466] font-manrope">Rp 12.500.000</p>
+        <p class="text-xs text-on-surface-variant">Jatuh tempo 14 Desember 2024</p>
+      </div>
+      <div class="flex items-center gap-2 bg-surface-container-low px-3 py-2 rounded-lg">
+        <span class="material-symbols-outlined text-on-surface-variant text-base">credit_card</span>
+        <span class="text-xs font-bold text-on-surface">•••• 8821</span>
+      </div>
+    </div>
+    <button class="w-full py-3 bg-[#003466] text-white font-bold text-sm rounded-lg hover:bg-primary transition-all active:scale-95 min-h-[48px]">
+      Bayar Sekarang
+    </button>
+  </section>
+
+  <!-- Auto Renewal Toggle -->
+  <section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-sm" aria-label="Perpanjangan otomatis">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-secondary-fixed rounded-xl flex items-center justify-center">
+          <span class="material-symbols-outlined text-secondary">autorenew</span>
+        </div>
+        <div>
+          <p class="text-sm font-bold text-on-surface">Perpanjangan Otomatis</p>
+          <p class="text-xs text-on-surface-variant">Aktif — diperbarui otomatis</p>
+        </div>
+      </div>
+      <button id="auto-toggle" role="switch" aria-checked="true" aria-label="Toggle perpanjangan otomatis"
+        class="w-12 h-6 bg-[#003466] rounded-full relative focus:ring-2 focus:ring-primary/20 outline-none">
+        <span class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full transition-all"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Payment Methods -->
+  <section class="space-y-3" aria-label="Metode pembayaran">
+    <div class="flex justify-between items-center">
+      <h3 class="text-base font-bold text-on-surface font-manrope">Metode Pembayaran</h3>
+      <button class="text-primary font-bold text-xs min-h-[44px] px-2">+ Tambah</button>
+    </div>
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 flex items-center justify-between shadow-sm">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-8 bg-on-surface rounded-lg flex items-center justify-center">
+          <span class="text-white font-black text-xs italic">VISA</span>
+        </div>
+        <div>
+          <p class="text-sm font-bold text-on-surface">•••• 4242</p>
+          <p class="text-xs text-on-surface-variant">Kadaluwarsa 12/26</p>
+        </div>
+      </div>
+      <span class="bg-primary-fixed text-[#003466] px-2 py-0.5 rounded-full text-[10px] font-bold">UTAMA</span>
+    </div>
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 flex items-center justify-between shadow-sm opacity-60">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-8 bg-[#003087] rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-xs italic">PayPal</span>
+        </div>
+        <div>
+          <p class="text-sm font-bold text-on-surface">legal@perusahaan.com</p>
+        </div>
+      </div>
+      <button class="w-10 h-10 flex items-center justify-center text-on-surface-variant" aria-label="Pengaturan PayPal">
+        <span class="material-symbols-outlined">settings</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Transaction History (Cards) -->
+  <section class="space-y-3 pb-4" aria-label="Riwayat transaksi">
+    <div class="flex justify-between items-center">
+      <h3 class="text-base font-bold text-on-surface font-manrope">Riwayat Transaksi</h3>
+      <button class="text-primary font-bold text-xs min-h-[44px] px-2">Lihat Semua</button>
+    </div>
+
+    <!-- Transaction 1 -->
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 flex items-center justify-between shadow-sm active:scale-[0.98] transition-transform">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-secondary-fixed rounded-full flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-secondary">receipt_long</span>
+        </div>
+        <div>
+          <p class="text-sm font-bold text-on-surface">Akses Legal Pro (Tahunan)</p>
+          <p class="text-xs text-on-surface-variant">14 Nov 2024 • VISA •••• 8821</p>
+        </div>
+      </div>
+      <div class="text-right shrink-0 ml-3">
+        <p class="text-sm font-bold text-on-surface">-Rp 12,5 Jt</p>
+        <p class="text-xs text-green-600 font-bold">Lunas</p>
+      </div>
+    </div>
+
+    <!-- Transaction 2 -->
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 flex items-center justify-between shadow-sm active:scale-[0.98] transition-transform">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary-fixed rounded-full flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[#003466]">gavel</span>
+        </div>
+        <div>
+          <p class="text-sm font-bold text-on-surface">Review Kontrak Tambahan</p>
+          <p class="text-xs text-on-surface-variant">22 Okt 2024 • VISA •••• 8821</p>
+        </div>
+      </div>
+      <div class="text-right shrink-0 ml-3">
+        <p class="text-sm font-bold text-on-surface">-Rp 2,5 Jt</p>
+        <p class="text-xs text-green-600 font-bold">Lunas</p>
+      </div>
+    </div>
+
+    <!-- Transaction 3 -->
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 flex items-center justify-between shadow-sm active:scale-[0.98] transition-transform">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-tertiary-fixed rounded-full flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-tertiary">support_agent</span>
+        </div>
+        <div>
+          <p class="text-sm font-bold text-on-surface">Konsultasi Litigasi Perdata</p>
+          <p class="text-xs text-on-surface-variant">15 Sep 2024 • VISA •••• 8821</p>
+        </div>
+      </div>
+      <div class="text-right shrink-0 ml-3">
+        <p class="text-sm font-bold text-on-surface">-Rp 5 Jt</p>
+        <p class="text-xs text-green-600 font-bold">Lunas</p>
+      </div>
+    </div>
+
+    <!-- Transaction 4 -->
+    <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-4 flex items-center justify-between shadow-sm active:scale-[0.98] transition-transform">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-secondary-fixed rounded-full flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-secondary">receipt_long</span>
+        </div>
+        <div>
+          <p class="text-sm font-bold text-on-surface">Pembaruan NIB OSS RBA</p>
+          <p class="text-xs text-on-surface-variant">14 Ags 2024 • VISA •••• 8821</p>
+        </div>
+      </div>
+      <div class="text-right shrink-0 ml-3">
+        <p class="text-sm font-bold text-on-surface">-Rp 3,75 Jt</p>
+        <p class="text-xs text-green-600 font-bold">Lunas</p>
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-on-surface-variant py-1">Menampilkan 4 dari 24 transaksi</p>
+  </section>
+</main>
+
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest border-t border-outline-variant/30 shadow-lg" aria-label="Navigasi bawah">
+  <div class="flex justify-around items-center h-16 px-2">
+    <a href="overview-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Beranda">
+      <span class="material-symbols-outlined text-xl">dashboard</span>
+      <span class="text-[10px] font-medium">Beranda</span>
+    </a>
+    <a href="permohonansaya-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Layanan">
+      <span class="material-symbols-outlined text-xl">gavel</span>
+      <span class="text-[10px] font-medium">Layanan</span>
+    </a>
+    <a href="brankasdokumen-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Dokumen">
+      <span class="material-symbols-outlined text-xl">folder_open</span>
+      <span class="text-[10px] font-medium">Dokumen</span>
+    </a>
+    <a href="profil-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full min-w-[44px] min-h-[44px]" aria-current="page" aria-label="Profil">
+      <span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">person</span>
+      <span class="text-[10px] font-bold">Profil</span>
+    </a>
+  </div>
+</nav>
+
+<script>
+const toggle = document.getElementById('auto-toggle');
+let isOn = true;
+toggle.addEventListener('click', () => {
+  isOn = !isOn;
+  toggle.setAttribute('aria-checked', isOn.toString());
+  toggle.classList.toggle('bg-[#003466]', isOn);
+  toggle.classList.toggle('bg-surface-container-high', !isOn);
+  const knob = toggle.querySelector('span');
+  knob.classList.toggle('right-1', isOn);
+  knob.classList.toggle('left-1', !isOn);
+  toggle.nextElementSibling?.querySelector('p:last-child')?.textContent;
+});
+</script>
+</body>
+</html>

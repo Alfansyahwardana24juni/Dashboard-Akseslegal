@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Konsultasi Ahli | Akses Legal Indonesia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#00518c", "on-primary": "#ffffff",
+        "primary-container": "#2a6aa7", "on-primary-container": "#d9e8ff",
+        "primary-fixed": "#d2e4ff", "primary-fixed-dim": "#9fcaff",
+        "secondary": "#7d5800", "secondary-container": "#ffbe3d",
+        "on-secondary-container": "#704e00", "secondary-fixed": "#ffdea9",
+        "secondary-fixed-dim": "#fcbc3a",
+        "tertiary": "#295276", "tertiary-fixed": "#cfe5ff",
+        "surface": "#f8f9ff", "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f2f3f9", "surface-container": "#ededf3",
+        "surface-container-high": "#e7e8ed", "surface-container-highest": "#e1e2e8",
+        "on-surface": "#191c20", "on-surface-variant": "#414750",
+        "outline": "#727781", "outline-variant": "#c1c7d1",
+        "background": "#f8f9ff", "error": "#ba1a1a", "error-container": "#ffdad6"
+      },
+      fontFamily: { "manrope": ["Manrope"], "inter": ["Inter"] }
+    }
+  }
+}
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+  .nav-active { border-right: 3px solid #003466; background-color: #ededf3; }
+  .chat-scroll::-webkit-scrollbar { width: 4px; }
+  .chat-scroll::-webkit-scrollbar-thumb { background: #c1c7d1; border-radius: 10px; }
+</style>
+</head>
+<body class="bg-background font-inter text-on-surface">
+
+<!-- Sidebar -->
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest shadow-[2px_0_16px_rgba(0,0,0,0.06)] flex flex-col z-40" aria-label="Navigasi utama">
+  <div class="px-6 py-6 border-b border-outline-variant/30">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-[#003466] rounded-lg flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-lg" style="font-variation-settings:'FILL' 1;">balance</span>
+      </div>
+      <div>
+        <h1 class="text-base font-black text-[#003466] leading-tight font-manrope">Digital Jurist</h1>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-secondary">Akses Legal</p>
+      </div>
+    </div>
+  </div>
+  <nav class="flex-1 px-3 py-4 space-y-1" aria-label="Menu navigasi">
+    <a href="overview-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">dashboard</span>
+      <span class="text-sm font-manrope">Overview</span>
+    </a>
+    <a href="konsultasi-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-[#003466] font-bold rounded-xl nav-active transition-all" aria-current="page">
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">support_agent</span>
+      <span class="text-sm font-manrope">Konsultasi</span>
+    </a>
+    <a href="permohonansaya-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">assignment</span>
+      <span class="text-sm font-manrope">Permohonan Saya</span>
+    </a>
+    <a href="brankasdokumen-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">folder_open</span>
+      <span class="text-sm font-manrope">Dokumen Legal</span>
+    </a>
+    <a href="billing&harga-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">payments</span>
+      <span class="text-sm font-manrope">Billing &amp; Harga</span>
+    </a>
+    <a href="klaimpelaporanspt-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">receipt_long</span>
+      <span class="text-sm font-manrope">Pelaporan Pajak</span>
+    </a>
+  </nav>
+  <div class="px-3 pb-4 space-y-2">
+    <div class="px-3 py-3 bg-primary/5 rounded-xl border border-primary/10">
+      <p class="text-[10px] font-bold text-primary uppercase tracking-wider mb-2">Layanan Baru</p>
+      <button class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#003466] text-white text-sm font-bold rounded-lg hover:bg-primary transition-all active:scale-95">
+        <span class="material-symbols-outlined text-sm">add</span>
+        Mulai Konsultasi
+      </button>
+    </div>
+    <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">help_outline</span>
+      <span class="font-manrope">Bantuan</span>
+    </a>
+    <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-error hover:bg-error-container/20 rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">logout</span>
+      <span class="font-manrope">Keluar</span>
+    </a>
+  </div>
+</aside>
+
+<!-- Main -->
+<div class="ml-64 h-screen flex flex-col">
+  <!-- Top Bar -->
+  <header class="sticky top-0 z-30 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm shrink-0" aria-label="Header aplikasi">
+    <div class="flex items-center justify-between px-8 h-16">
+      <div class="flex-1 max-w-md">
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+          <input type="text" placeholder="Cari layanan hukum..." aria-label="Cari layanan"
+            class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-full text-sm border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+        </div>
+      </div>
+      <div class="flex items-center gap-4 pl-6">
+        <button class="relative p-2 rounded-full hover:bg-surface-container transition-colors" aria-label="Notifikasi">
+          <span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+        </button>
+        <div class="flex items-center gap-2 cursor-pointer">
+          <div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-sm">BD</div>
+          <div class="hidden lg:block">
+            <p class="text-sm font-bold text-on-surface leading-none">Budi Darmawan</p>
+            <p class="text-[10px] text-on-surface-variant">Direktur Utama</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Chat Layout -->
+  <main class="flex-1 flex overflow-hidden" aria-label="Konten konsultasi">
+
+    <!-- Specialist List Panel -->
+    <section class="w-80 border-r border-outline-variant/30 flex flex-col bg-surface-container-lowest shrink-0" aria-label="Daftar specialist">
+      <div class="p-5 border-b border-outline-variant/30">
+        <h2 class="text-lg font-bold text-[#003466] font-manrope mb-3">Konsultasi Live</h2>
+        <div class="relative mb-3">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-base">search</span>
+          <input type="text" placeholder="Cari pakar..." aria-label="Cari specialist"
+            class="w-full pl-9 pr-3 py-2 bg-surface-container rounded-lg text-sm border border-outline-variant/40 focus:ring-1 focus:ring-primary outline-none">
+        </div>
+        <!-- Filter Pills -->
+        <div class="flex gap-2 overflow-x-auto pb-1" role="group" aria-label="Filter kategori">
+          <button class="filter-pill px-3 py-1.5 rounded-full bg-[#003466] text-white text-xs font-bold whitespace-nowrap min-h-[36px]" data-filter="all">Semua</button>
+          <button class="filter-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-bold whitespace-nowrap min-h-[36px] hover:bg-surface-container-highest transition-colors" data-filter="legal">Legal</button>
+          <button class="filter-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-bold whitespace-nowrap min-h-[36px] hover:bg-surface-container-highest transition-colors" data-filter="pajak">Pajak</button>
+          <button class="filter-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-bold whitespace-nowrap min-h-[36px] hover:bg-surface-container-highest transition-colors" data-filter="notaris">Notaris</button>
+        </div>
+      </div>
+
+      <div class="flex-1 overflow-y-auto chat-scroll p-3 space-y-2">
+        <!-- Specialist 1 - Active/LIVE -->
+        <button class="specialist-card w-full p-3 bg-primary-fixed rounded-xl border-l-4 border-primary shadow-sm flex gap-3 text-left hover:bg-primary-fixed/80 transition-all active-specialist" data-name="Siti Aminah, S.H., M.H." data-role="Corporate Lawyer" aria-pressed="true">
+          <div class="relative shrink-0">
+            <div class="w-11 h-11 rounded-lg bg-primary-container flex items-center justify-center text-white font-bold text-sm">SA</div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
+          </div>
+          <div class="flex-1 overflow-hidden">
+            <div class="flex justify-between items-start">
+              <p class="font-bold text-sm text-[#003466] truncate">Siti Aminah, S.H., M.H.</p>
+              <span class="text-[9px] font-black text-green-600 bg-green-100 px-1.5 py-0.5 rounded-full shrink-0 ml-1">LIVE</span>
+            </div>
+            <p class="text-[11px] font-semibold text-primary mb-0.5">Corporate Lawyer</p>
+            <p class="text-xs text-on-surface-variant truncate">Dokumen NIB Anda sudah saya periksa...</p>
+          </div>
+        </button>
+
+        <!-- Specialist 2 - Offline -->
+        <button class="specialist-card w-full p-3 bg-surface-container-lowest rounded-xl border border-outline-variant/30 flex gap-3 text-left hover:bg-surface-container-low transition-all opacity-70" data-name="Budi Santoso, Ak." data-role="Tax Specialist" aria-pressed="false">
+          <div class="relative shrink-0">
+            <div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant font-bold text-sm">BS</div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-slate-300 border-2 border-white rounded-full"></span>
+          </div>
+          <div class="flex-1 overflow-hidden">
+            <div class="flex justify-between items-start">
+              <p class="font-bold text-sm text-on-surface truncate">Budi Santoso, Ak.</p>
+              <span class="text-[9px] font-medium text-on-surface-variant shrink-0 ml-1">Offline</span>
+            </div>
+            <p class="text-[11px] font-semibold text-secondary mb-0.5">Tax Specialist</p>
+            <p class="text-xs text-on-surface-variant truncate">Siap membantu pelaporan SPT Tahunan.</p>
+          </div>
+        </button>
+
+        <!-- Specialist 3 - Online -->
+        <button class="specialist-card w-full p-3 bg-surface-container-lowest rounded-xl border border-outline-variant/30 flex gap-3 text-left hover:bg-surface-container-low transition-all" data-name="Lidya Permata, S.H." data-role="IP & Licensing" aria-pressed="false">
+          <div class="relative shrink-0">
+            <div class="w-11 h-11 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary font-bold text-sm">LP</div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
+          </div>
+          <div class="flex-1 overflow-hidden">
+            <div class="flex justify-between items-start">
+              <p class="font-bold text-sm text-on-surface truncate">Lidya Permata, S.H.</p>
+              <span class="text-[9px] font-bold text-green-600 shrink-0 ml-1">Online</span>
+            </div>
+            <p class="text-[11px] font-semibold text-primary mb-0.5">IP &amp; Licensing</p>
+            <p class="text-xs text-on-surface-variant truncate">Ingin konsultasi pendaftaran merek?</p>
+          </div>
+        </button>
+
+        <!-- Specialist 4 - Online -->
+        <button class="specialist-card w-full p-3 bg-surface-container-lowest rounded-xl border border-outline-variant/30 flex gap-3 text-left hover:bg-surface-container-low transition-all" data-name="Ahmad Fauzi, S.H." data-role="Notaris" aria-pressed="false">
+          <div class="relative shrink-0">
+            <div class="w-11 h-11 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary font-bold text-sm">AF</div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
+          </div>
+          <div class="flex-1 overflow-hidden">
+            <div class="flex justify-between items-start">
+              <p class="font-bold text-sm text-on-surface truncate">Ahmad Fauzi, S.H.</p>
+              <span class="text-[9px] font-bold text-green-600 shrink-0 ml-1">Online</span>
+            </div>
+            <p class="text-[11px] font-semibold text-secondary mb-0.5">Notaris</p>
+            <p class="text-xs text-on-surface-variant truncate">Konsultasi akta dan legalisasi dokumen.</p>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Chat Area -->
+    <section class="flex-1 flex flex-col bg-surface-container-lowest" aria-label="Area chat">
+      <!-- Chat Header -->
+      <div class="px-6 py-4 border-b border-outline-variant/30 flex justify-between items-center bg-surface-container-lowest shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-primary-container flex items-center justify-center text-white font-bold">SA</div>
+          <div>
+            <h3 class="font-bold text-[#003466] font-manrope" id="chat-name">Siti Aminah, S.H., M.H.</h3>
+            <p class="text-xs text-green-600 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 bg-green-500 rounded-full inline-block"></span>
+              Aktif sekarang
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button class="flex items-center gap-2 px-4 py-2 rounded-lg border border-outline-variant/40 text-[#003466] hover:bg-surface-container transition-colors text-sm font-bold min-h-[44px]" aria-label="Video Call">
+            <span class="material-symbols-outlined text-lg">videocam</span>
+            Video Call
+          </button>
+          <button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary text-white hover:bg-secondary-fixed-dim transition-colors text-sm font-bold min-h-[44px]" aria-label="Review Dokumen">
+            <span class="material-symbols-outlined text-lg">description</span>
+            Review Dokumen
+          </button>
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div class="flex-1 overflow-y-auto chat-scroll p-6 space-y-5 bg-surface" id="chat-messages">
+        <div class="flex justify-center">
+          <span class="px-4 py-1 bg-surface-container-high rounded-full text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">Hari Ini</span>
+        </div>
+        <!-- Incoming -->
+        <div class="flex gap-3 max-w-[75%]">
+          <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-xs shrink-0 mt-1">SA</div>
+          <div class="bg-surface-container-lowest p-4 rounded-2xl rounded-tl-none shadow-sm border border-outline-variant/30">
+            <p class="text-sm leading-relaxed text-on-surface">Selamat siang, Bapak/Ibu. Saya Siti Aminah dari tim Legal Akses Legal Indonesia. Saya sedang meninjau dokumen NIB yang Anda unggah sebelumnya.</p>
+            <span class="text-[10px] text-on-surface-variant block mt-2">14:02</span>
+          </div>
+        </div>
+        <!-- Outgoing -->
+        <div class="flex flex-row-reverse gap-3 max-w-[75%] ml-auto">
+          <div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-[#003466] font-bold text-xs shrink-0 mt-1">BD</div>
+          <div class="bg-[#003466] text-white p-4 rounded-2xl rounded-tr-none shadow-md">
+            <p class="text-sm leading-relaxed">Terima kasih Bu Siti. Bagaimana kelengkapan dokumen tersebut untuk pendaftaran izin edar?</p>
+            <span class="text-[10px] opacity-70 block mt-2 text-right">14:05</span>
+          </div>
+        </div>
+        <!-- Incoming with attachment -->
+        <div class="flex gap-3 max-w-[75%]">
+          <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-xs shrink-0 mt-1">SA</div>
+          <div class="bg-surface-container-lowest p-4 rounded-2xl rounded-tl-none shadow-sm border border-outline-variant/30">
+            <p class="text-sm leading-relaxed text-on-surface mb-3">Secara umum sudah baik. Ada sedikit revisi pada bagian alamat operasional. Saya sertakan panduan revisinya.</p>
+            <div class="p-3 bg-surface-container-low rounded-lg border border-outline-variant/40 flex items-center gap-3 cursor-pointer hover:bg-surface-container-high transition-colors">
+              <span class="material-symbols-outlined text-error" style="font-variation-settings:'FILL' 1;">picture_as_pdf</span>
+              <div class="flex-1">
+                <p class="text-xs font-bold text-[#003466]">Panduan_Revisi_NIB.pdf</p>
+                <p class="text-[10px] text-on-surface-variant">1.2 MB</p>
+              </div>
+              <span class="material-symbols-outlined text-on-surface-variant text-base">download</span>
+            </div>
+            <span class="text-[10px] text-on-surface-variant block mt-2">14:10</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="p-4 border-t border-outline-variant/30 bg-surface-container-lowest shrink-0">
+        <div class="flex items-end gap-3">
+          <div class="flex gap-1">
+            <button class="p-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-xl transition-all min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Lampirkan file">
+              <span class="material-symbols-outlined">attach_file</span>
+            </button>
+            <button class="p-2.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-xl transition-all min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Sisipkan gambar">
+              <span class="material-symbols-outlined">image</span>
+            </button>
+          </div>
+          <div class="flex-1">
+            <textarea id="msg-input" rows="1" placeholder="Ketik pesan konsultasi Anda di sini..."
+              class="w-full bg-surface-container rounded-2xl py-3 px-4 text-sm resize-none border-none focus:ring-1 focus:ring-primary outline-none chat-scroll min-h-[48px] max-h-[120px]"
+              aria-label="Pesan konsultasi"></textarea>
+          </div>
+          <button id="send-btn" class="p-3 bg-[#003466] text-white rounded-2xl hover:bg-primary transition-all shadow-md min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Kirim pesan">
+            <span class="material-symbols-outlined">send</span>
+          </button>
+        </div>
+        <p class="text-[10px] text-on-surface-variant text-center mt-2 flex items-center justify-center gap-1 italic">
+          <span class="material-symbols-outlined text-xs">security</span>
+          Konsultasi ini dienkripsi secara end-to-end untuk menjaga kerahasiaan hukum perusahaan Anda.
+        </p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+// Filter pills
+document.querySelectorAll('.filter-pill').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-pill').forEach(b => {
+      b.classList.remove('bg-[#003466]', 'text-white');
+      b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+    });
+    btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+    btn.classList.add('bg-[#003466]', 'text-white');
+  });
+});
+
+// Specialist selection
+document.querySelectorAll('.specialist-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.specialist-card').forEach(c => {
+      c.classList.remove('bg-primary-fixed', 'border-l-4', 'border-primary', 'shadow-sm');
+      c.classList.add('bg-surface-container-lowest', 'border', 'border-outline-variant/30');
+      c.setAttribute('aria-pressed', 'false');
+    });
+    card.classList.remove('bg-surface-container-lowest', 'border', 'border-outline-variant/30');
+    card.classList.add('bg-primary-fixed', 'border-l-4', 'border-primary', 'shadow-sm');
+    card.setAttribute('aria-pressed', 'true');
+    document.getElementById('chat-name').textContent = card.dataset.name;
+  });
+});
+
+// Send message
+const input = document.getElementById('msg-input');
+const sendBtn = document.getElementById('send-btn');
+const messages = document.getElementById('chat-messages');
+
+function sendMessage() {
+  const text = input.value.trim();
+  if (!text) return;
+  const now = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+  const msgHtml = `
+    <div class="flex flex-row-reverse gap-3 max-w-[75%] ml-auto">
+      <div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-[#003466] font-bold text-xs shrink-0 mt-1">BD</div>
+      <div class="bg-[#003466] text-white p-4 rounded-2xl rounded-tr-none shadow-md">
+        <p class="text-sm leading-relaxed">${text.replace(/</g,'&lt;')}</p>
+        <span class="text-[10px] opacity-70 block mt-2 text-right">${now}</span>
+      </div>
+    </div>`;
+  messages.insertAdjacentHTML('beforeend', msgHtml);
+  input.value = '';
+  input.style.height = 'auto';
+  messages.scrollTop = messages.scrollHeight;
+}
+
+sendBtn.addEventListener('click', sendMessage);
+input.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } });
+input.addEventListener('input', () => { input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 120) + 'px'; });
+</script>
+</body>
+</html>
