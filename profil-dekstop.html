@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="light" lang="id">
 <head>
 <meta charset="utf-8">
@@ -30,7 +30,7 @@ tailwind.config = {
 <body class="bg-background font-inter text-on-surface">
 
 <!-- Sidebar -->
-<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest shadow-[2px_0_16px_rgba(0,0,0,0.06)] flex flex-col z-40" aria-label="Navigasi utama">
+<aside class="hidden md:flex fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest shadow-[2px_0_16px_rgba(0,0,0,0.06)] flex-col z-40" aria-label="Navigasi utama">
   <div class="px-6 py-6 border-b border-outline-variant/30">
     <div class="flex items-center gap-3">
       <div class="w-9 h-9 bg-[#003466] rounded-lg flex items-center justify-center">
@@ -78,11 +78,75 @@ tailwind.config = {
   </div>
 </aside>
 
+<!-- Mobile Nav Backdrop -->
+<div id="mobile-nav-backdrop" class="fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 opacity-0 pointer-events-none md:hidden"></div>
+<!-- Mobile Nav Drawer -->
+<div id="mobile-nav-panel" class="fixed inset-y-0 left-0 w-72 max-w-[320px] bg-surface-container-lowest shadow-[0_0_32px_rgba(0,0,0,0.16)] z-50 overflow-y-auto transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+  <div class="flex items-center justify-between px-5 py-5 border-b border-outline-variant/30">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-[#003466] rounded-lg flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-lg" style="font-variation-settings:'FILL' 1;">balance</span>
+      </div>
+      <div>
+        <h2 class="text-sm font-black text-[#003466] font-manrope">Digital Jurist</h2>
+        <p class="text-[10px] uppercase tracking-widest text-secondary">Menu</p>
+      </div>
+    </div>
+    <button id="mobile-nav-close" class="p-2 rounded-full hover:bg-surface-container active:scale-95 transition-transform" aria-label="Tutup menu">
+      <span class="material-symbols-outlined text-on-surface-variant">close</span>
+    </button>
+  </div>
+  <nav class="px-5 py-4 space-y-2" aria-label="Menu navigasi mobile">
+    <a href="overview-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">dashboard</span>
+      <span class="text-sm font-manrope">Overview</span>
+    </a>
+    <a href="konsultasi-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">support_agent</span>
+      <span class="text-sm font-manrope">Konsultasi</span>
+    </a>
+    <a href="permohonansaya-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">assignment</span>
+      <span class="text-sm font-manrope">Permohonan Saya</span>
+    </a>
+    <a href="brankasdokumen-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">folder_open</span>
+      <span class="text-sm font-manrope">Dokumen Legal</span>
+    </a>
+    <a href="billing&harga-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">payments</span>
+      <span class="text-sm font-manrope">Billing &amp; Harga</span>
+    </a>
+    <a href="pelaporanpajak-dekstop.html" class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all group">
+      <span class="material-symbols-outlined group-hover:text-primary">receipt_long</span>
+      <span class="text-sm font-manrope">Pelaporan Pajak</span>
+    </a>
+  </nav>
+  <div class="px-5 pb-4 space-y-2">
+    <div class="px-3 py-3 bg-primary/5 rounded-xl border border-primary/10">
+      <p class="text-[10px] font-bold text-primary uppercase tracking-wider mb-2">Layanan Baru</p>
+      <a href="konsultasi-dekstop.html" class="flex items-center justify-center gap-2 w-full py-2.5 bg-[#003466] text-white text-sm font-bold rounded-lg hover:bg-primary transition-all active:scale-95">
+        <span class="material-symbols-outlined text-sm">add</span>
+        Mulai Konsultasi
+      </a>
+    </div>
+    <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-on-surface-variant hover:bg-surface-container rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">help_outline</span>
+      <span class="font-manrope">Bantuan</span>
+    </a>
+    <a href="login.html" class="flex items-center gap-3 px-4 py-2.5 text-error hover:bg-error-container/20 rounded-xl transition-all text-sm">
+      <span class="material-symbols-outlined text-lg">logout</span>
+      <span class="font-manrope">Keluar</span>
+    </a>
+  </div>
+</div>
+
 <!-- Main -->
-<div class="ml-64 min-h-screen flex flex-col">
+<div class="md:ml-64 min-h-screen flex flex-col">
   <header class="sticky top-0 z-30 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-sm" aria-label="Header aplikasi">
     <div class="flex items-center justify-between px-8 h-16">
       <div class="flex-1 max-w-md">
+        <button id="mobile-menu-button" class="md:hidden inline-flex items-center justify-center p-2 rounded-full hover:bg-surface-container active:scale-95 transition-transform shrink-0 mr-2" aria-label="Buka menu"><span class="material-symbols-outlined text-on-surface-variant">menu</span></button>
         <div class="relative">
           <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
           <input type="text" placeholder="Cari layanan..." aria-label="Cari layanan" class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-full text-sm border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all">
@@ -363,5 +427,32 @@ document.querySelectorAll('.toggle-switch').forEach(btn => {
   });
 });
 </script>
+<script>
+  const mobileNavButton = document.getElementById("mobile-menu-button");
+  const mobileNavBackdrop = document.getElementById("mobile-nav-backdrop");
+  const mobileNavPanel = document.getElementById("mobile-nav-panel");
+  const mobileNavClose = document.getElementById("mobile-nav-close");
+  const openNav = () => {
+    if(!mobileNavBackdrop || !mobileNavPanel) return;
+    mobileNavBackdrop.classList.remove("opacity-0","pointer-events-none");
+    mobileNavBackdrop.classList.add("opacity-100","pointer-events-auto");
+    mobileNavPanel.classList.remove("-translate-x-full");
+    mobileNavPanel.classList.add("translate-x-0");
+    document.body.classList.add("overflow-hidden");
+  };
+  const closeNav = () => {
+    if(!mobileNavBackdrop || !mobileNavPanel) return;
+    mobileNavBackdrop.classList.add("opacity-0","pointer-events-none");
+    mobileNavBackdrop.classList.remove("opacity-100","pointer-events-auto");
+    mobileNavPanel.classList.add("-translate-x-full");
+    mobileNavPanel.classList.remove("translate-x-0");
+    document.body.classList.remove("overflow-hidden");
+  };
+  mobileNavButton?.addEventListener("click", openNav);
+  mobileNavClose?.addEventListener("click", closeNav);
+  mobileNavBackdrop?.addEventListener("click", closeNav);
+</script>
 </body>
 </html>
+
+

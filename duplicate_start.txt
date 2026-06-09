@@ -1,0 +1,1 @@
+﻿<div>        <h2 class="text-sm font-black text-[#003466] font-manrope">Akses Legal</h2>        <p class="text-[10px] uppercase tracking-widest text-secondary">Menu</p>      </div>    </div>    <butto

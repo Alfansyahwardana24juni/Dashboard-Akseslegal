@@ -181,32 +181,119 @@ tailwind.config = {
 
 </main>
 
-<!-- FAB -->
-<a href="konsultasi-mobile.html" class="fixed bottom-20 right-4 w-14 h-14 bg-secondary-container text-on-secondary-container rounded-2xl shadow-xl flex items-center justify-center z-40 border-2 border-white active:scale-90 transition-transform" aria-label="Konsultasi ahli">
-  <span class="material-symbols-outlined text-2xl" style="font-variation-settings:'FILL' 1;">support_agent</span>
-</a>
+<!-- Bottom Nav Opsi 4: FAB di tengah -->
+<nav class="fixed bottom-0 left-0 right-0 z-50" aria-label="Navigasi bawah">
+  <!-- Action Sheet Modal -->
+  <div id="action-sheet" class="hidden fixed inset-0 z-40" role="dialog" aria-modal="true" aria-label="Layanan baru">
+    <div id="sheet-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeSheet()"></div>
+    <div class="absolute bottom-0 left-0 right-0 bg-surface-container-lowest rounded-t-3xl p-6 shadow-2xl transform transition-transform duration-300">
+      <div class="w-10 h-1 bg-outline-variant rounded-full mx-auto mb-5"></div>
+      <p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-4">Mulai Layanan Baru</p>
+      <div class="space-y-3">
+        <a href="klaimnib-mobile.html" class="flex items-center gap-4 p-4 bg-primary-fixed rounded-xl hover:bg-primary-fixed/80 transition-colors active:scale-[0.98]">
+          <div class="w-11 h-11 bg-[#003466] rounded-xl flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-white">corporate_fare</span>
+          </div>
+          <div>
+            <p class="font-bold text-sm text-[#003466]">Klaim NIB</p>
+            <p class="text-xs text-on-surface-variant">Pendaftaran Nomor Induk Berusaha</p>
+          </div>
+          <span class="material-symbols-outlined text-on-surface-variant text-base ml-auto">chevron_right</span>
+        </a>
+        <a href="klaimnpwp-mobile.html" class="flex items-center gap-4 p-4 bg-secondary-fixed/30 rounded-xl hover:bg-secondary-fixed/50 transition-colors active:scale-[0.98]">
+          <div class="w-11 h-11 bg-secondary-fixed rounded-xl flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-secondary">badge</span>
+          </div>
+          <div>
+            <p class="font-bold text-sm text-on-surface">Klaim NPWP</p>
+            <p class="text-xs text-on-surface-variant">Identitas Perpajakan Badan Usaha</p>
+          </div>
+          <span class="material-symbols-outlined text-on-surface-variant text-base ml-auto">chevron_right</span>
+        </a>
+        <a href="klaimpelaporanspt-mobile.html" class="flex items-center gap-4 p-4 bg-tertiary-fixed/30 rounded-xl hover:bg-tertiary-fixed/50 transition-colors active:scale-[0.98]">
+          <div class="w-11 h-11 bg-tertiary-fixed rounded-xl flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-tertiary">receipt_long</span>
+          </div>
+          <div>
+            <p class="font-bold text-sm text-on-surface">Lapor SPT</p>
+            <p class="text-xs text-on-surface-variant">Pelaporan Pajak Tahunan Badan</p>
+          </div>
+          <span class="material-symbols-outlined text-on-surface-variant text-base ml-auto">chevron_right</span>
+        </a>
+        <a href="konsultasi-mobile.html" class="flex items-center gap-4 p-4 bg-surface-container-low rounded-xl hover:bg-surface-container transition-colors active:scale-[0.98]">
+          <div class="w-11 h-11 bg-[#003466] rounded-xl flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-secondary-container" style="font-variation-settings:'FILL' 1;">support_agent</span>
+          </div>
+          <div>
+            <p class="font-bold text-sm text-on-surface">Konsultasi Ahli</p>
+            <p class="text-xs text-on-surface-variant">Chat langsung dengan lawyer &amp; tax specialist</p>
+          </div>
+          <span class="material-symbols-outlined text-on-surface-variant text-base ml-auto">chevron_right</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
-<!-- Bottom Navigation -->
-<nav class="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest border-t border-outline-variant/30 shadow-lg" aria-label="Navigasi bawah">
-  <div class="flex justify-around items-center h-16 px-2">
-    <a href="overview-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full min-w-[44px] min-h-[44px]" aria-current="page" aria-label="Beranda">
-      <span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">dashboard</span>
-      <span class="text-[10px] font-bold">Beranda</span>
-    </a>
-    <a href="permohonansaya-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Layanan">
-      <span class="material-symbols-outlined text-xl">gavel</span>
-      <span class="text-[10px] font-medium">Layanan</span>
-    </a>
-    <a href="brankasdokumen-mobile.html" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Dokumen">
-      <span class="material-symbols-outlined text-xl">folder_open</span>
-      <span class="text-[10px] font-medium">Dokumen</span>
-    </a>
-    <a href="#" class="flex flex-col items-center justify-center gap-1 px-4 py-2 text-on-surface-variant min-w-[44px] min-h-[44px]" aria-label="Profil">
-      <span class="material-symbols-outlined text-xl">person</span>
-      <span class="text-[10px] font-medium">Profil</span>
-    </a>
+  <!-- Nav Bar -->
+  <div class="bg-surface-container-lowest border-t border-outline-variant/30 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+    <div class="flex items-end justify-around px-2 h-[68px]">
+      <!-- Beranda -->
+      <a href="overview-mobile.html" class="flex flex-col items-center justify-center gap-0.5 flex-1 py-3 min-h-[44px]" aria-current="page" aria-label="Beranda">
+        <div class="px-4 py-1 bg-secondary-container rounded-full">
+          <span class="material-symbols-outlined text-on-secondary-container text-xl" style="font-variation-settings:'FILL' 1;">dashboard</span>
+        </div>
+        <span class="text-[10px] font-bold text-on-secondary-container">Beranda</span>
+      </a>
+      <!-- Layanan -->
+      <a href="permohonansaya-mobile.html" class="flex flex-col items-center justify-center gap-0.5 flex-1 py-3 min-h-[44px]" aria-label="Layanan">
+        <span class="material-symbols-outlined text-on-surface-variant text-xl">gavel</span>
+        <span class="text-[10px] font-medium text-on-surface-variant">Layanan</span>
+      </a>
+      <!-- FAB Center -->
+      <div class="flex flex-col items-center justify-end flex-1 pb-2">
+        <button id="fab-btn" onclick="openSheet()" aria-label="Buka menu layanan baru" aria-expanded="false"
+          class="w-14 h-14 bg-[#003466] text-white rounded-2xl shadow-[0_4px_16px_rgba(0,52,102,0.4)] flex items-center justify-center -mt-5 border-4 border-surface-container-lowest active:scale-90 transition-all hover:bg-primary">
+          <span class="material-symbols-outlined text-2xl" id="fab-icon">add</span>
+        </button>
+        <span class="text-[9px] font-bold text-[#003466] mt-1">Baru</span>
+      </div>
+      <!-- Dokumen -->
+      <a href="brankasdokumen-mobile.html" class="flex flex-col items-center justify-center gap-0.5 flex-1 py-3 min-h-[44px]" aria-label="Dokumen">
+        <span class="material-symbols-outlined text-on-surface-variant text-xl">folder_open</span>
+        <span class="text-[10px] font-medium text-on-surface-variant">Dokumen</span>
+      </a>
+      <!-- Profil -->
+      <a href="profil-mobile.html" class="flex flex-col items-center justify-center gap-0.5 flex-1 py-3 min-h-[44px]" aria-label="Profil">
+        <span class="material-symbols-outlined text-on-surface-variant text-xl">person</span>
+        <span class="text-[10px] font-medium text-on-surface-variant">Profil</span>
+      </a>
+    </div>
   </div>
 </nav>
+
+<script>
+function openSheet() {
+  const sheet = document.getElementById('action-sheet');
+  const btn = document.getElementById('fab-btn');
+  const icon = document.getElementById('fab-icon');
+  sheet.classList.remove('hidden');
+  btn.classList.add('rotate-45');
+  icon.textContent = 'close';
+  btn.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+function closeSheet() {
+  const sheet = document.getElementById('action-sheet');
+  const btn = document.getElementById('fab-btn');
+  const icon = document.getElementById('fab-icon');
+  sheet.classList.add('hidden');
+  btn.classList.remove('rotate-45');
+  icon.textContent = 'add';
+  btn.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+</script>
 
 </body>
 </html>
